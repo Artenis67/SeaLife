@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b3q3v11153op3"]
+
+[node name="MainScene" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
