@@ -1,0 +1,16 @@
+~ start
+Technicien: Bonjour capitaine !
+Capitaine: Bonjour, que me vaut le plaisir de cette visite ? 
+Technicien: Eh bien... a vrai dire il y a un soucis...
+Capitaine: Venez en au fait, [shake rate=20 level=10]que ce passe-t-il[/shake] ? 
+Technicien: Une partie de la salle des moteurs a une panne technique, nous risquons de perdre de la vitesse.
+Capitaine: Que peut on nous faire ? 
+Technicien: Nous pouvons regler le soucis mais cela va nous demander une nuit blanche... en dehors de notre contact.
+Capitaine: [wave amp=25 freq=5]Hmmm...[/wave]
+- Payer un bonus pour reparer
+	do EventChoices.technical_issue_choice = "pay"
+	Technicien: Parfait chef ! On s'en occupe tout de suite !
+- Ne rien faire
+	do EventChoices.technical_issue_choice = "nothing"
+	Technicien: Compris, éspérons que cela ne s'agrave pas...
+=> END

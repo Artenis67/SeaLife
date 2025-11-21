@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c3mlvrxo0dus2"
+path="res://.godot/imported/technical_issue.dialogue-3f8ebd635ca8191496bebc3084af3eeb.tres"
+
+[deps]
+
+source_file="res://dialogues/events/technical_issue.dialogue"
+dest_files=["res://.godot/imported/technical_issue.dialogue-3f8ebd635ca8191496bebc3084af3eeb.tres"]
+
+[params]
+
+defaults=true

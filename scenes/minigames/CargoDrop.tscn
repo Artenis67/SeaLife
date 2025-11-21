@@ -1,0 +1,99 @@
+[gd_scene load_steps=17 format=3 uid="uid://dtqgm7fbh0i1x"]
+
+[ext_resource type="Texture2D" uid="uid://cnsfvqw54577y" path="res://assets/cargodrop/sea_background.jpeg" id="1_omasq"]
+[ext_resource type="Script" uid="uid://7u3nfbcuiqm0" path="res://scripts/cargo_drop.gd" id="1_v8l1p"]
+[ext_resource type="Texture2D" uid="uid://t4pneg1miopr" path="res://assets/cargodrop/conteneur/pc7.png" id="2_u15i1"]
+[ext_resource type="PackedScene" uid="uid://58paxp7fbbs7" path="res://prefabs/FallingCargoBlue.tscn" id="2_x3lm7"]
+[ext_resource type="Texture2D" uid="uid://pb8f0ew55wlr" path="res://assets/cargodrop/shadow.png" id="3_e4g12"]
+[ext_resource type="PackedScene" uid="uid://8830h86jqksd" path="res://prefabs/FallingCargoRed.tscn" id="3_srsjm"]
+[ext_resource type="Texture2D" uid="uid://hgh2inte5vsc" path="res://assets/cargodrop/conteneur/pc6.png" id="5_is6gf"]
+[ext_resource type="Texture2D" uid="uid://bcnihjyf2jr1s" path="res://assets/cargodrop/conteneur/pc5.png" id="6_kpt4y"]
+[ext_resource type="Script" uid="uid://f6vlm0t31bnn" path="res://scripts/collector.gd" id="6_srsjm"]
+[ext_resource type="Texture2D" uid="uid://ctm3kyg4e2goh" path="res://assets/cargodrop/conteneur/pc4.png" id="7_60oha"]
+[ext_resource type="Texture2D" uid="uid://d142su7nbourl" path="res://assets/cargodrop/conteneur/pc3.png" id="8_4it0h"]
+[ext_resource type="Texture2D" uid="uid://domynyspvj7sf" path="res://assets/cargodrop/conteneur/pc2.png" id="9_h1d01"]
+[ext_resource type="Texture2D" uid="uid://dnkihv30dhv60" path="res://assets/cargodrop/conteneur/pc1.png" id="10_gv6b8"]
+[ext_resource type="Texture2D" uid="uid://cn5un2yrlfh4h" path="res://assets/cargodrop/conteneur/pc.png" id="11_b0lfi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gu3d"]
+size = Vector2(327.465, 128.31)
+
+[sub_resource type="Curve2D" id="Curve2D_omasq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 17, 11, 0, 0, 0, 0, 1937, 4)
+}
+point_count = 2
+
+[node name="CargoDrop" type="Node2D"]
+z_index = 2
+script = ExtResource("1_v8l1p")
+cargo1 = ExtResource("2_x3lm7")
+cargo2 = ExtResource("3_srsjm")
+pc0 = ExtResource("2_u15i1")
+pc1 = ExtResource("5_is6gf")
+pc2 = ExtResource("6_kpt4y")
+pc3 = ExtResource("7_60oha")
+pc4 = ExtResource("8_4it0h")
+pc5 = ExtResource("9_h1d01")
+pc6 = ExtResource("10_gv6b8")
+pc7 = ExtResource("11_b0lfi")
+
+[node name="cargo_parent" type="Node2D" parent="."]
+
+[node name="bg" type="TextureRect" parent="."]
+z_index = -1
+texture_filter = 1
+offset_left = -10.0
+offset_top = -244.0
+offset_right = 1014.0
+offset_bottom = 780.0
+scale = Vector2(1.905, 1.905)
+texture = ExtResource("1_omasq")
+
+[node name="collector" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+position = Vector2(303, 870)
+scale = Vector2(0.71, 0.71)
+texture = ExtResource("2_u15i1")
+script = ExtResource("6_srsjm")
+
+[node name="TextureRect" type="TextureRect" parent="collector"]
+modulate = Color(1, 1, 1, 0.305882)
+z_index = -1
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -466.0
+offset_top = -337.5
+offset_right = 60.0
+offset_bottom = -12.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_e4g12")
+expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="collector"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collector/Area2D"]
+position = Vector2(1.05634, -2.81677)
+shape = SubResource("RectangleShape2D_4gu3d")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_omasq")
+
+[node name="SpawnLocation" type="PathFollow2D" parent="Path2D"]
+position = Vector2(790.949, 8.17831)
+rotation = -0.00364582
+progress = 773.953
+
+[node name="SpawnerTimer" type="Timer" parent="."]
+wait_time = 0.37
+autostart = true
+
+[connection signal="area_entered" from="collector/Area2D" to="collector" method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="SpawnerTimer" to="." method="_on_spawner_timer_timeout"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://8830h86jqksd"]
+
+[ext_resource type="Texture2D" uid="uid://dj2d0e0ad1rly" path="res://assets/cargodrop/cont_1.png" id="1_25dky"]
+[ext_resource type="Script" uid="uid://cfpfolhno80ry" path="res://scripts/falling_cargo.gd" id="1_t0u6y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_25dky"]
+radius = 98.0204
+
+[node name="FallingCargoRed" type="Node2D"]
+script = ExtResource("1_t0u6y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_25dky")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_25dky")

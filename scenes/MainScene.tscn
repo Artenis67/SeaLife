@@ -1,8 +1,1583 @@
-[gd_scene format=3 uid="uid://b3q3v11153op3"]
+[gd_scene load_steps=30 format=3 uid="uid://b3q3v11153op3"]
+
+[ext_resource type="Texture2D" uid="uid://da5x03pdgl0kj" path="res://assets/UI/kenney_ui-pack-pixel-adventure/Tilesheets/Large tiles/Thick outline/tilemap_packed.png" id="1_08o8g"]
+[ext_resource type="Script" uid="uid://bpfv67ofqxsv2" path="res://scripts/backgroundmanager.gd" id="1_611at"]
+[ext_resource type="Texture2D" uid="uid://by38ti4qs2jl4" path="res://assets/UI/kenney_ui-pack-pixel-adventure/Tilesheets/Small tiles/Thick outline/tilemap_packed.png" id="2_0cxu4"]
+[ext_resource type="Script" uid="uid://dckrj56k4cdru" path="res://scripts/hudmanager.gd" id="2_ibiss"]
+[ext_resource type="Script" uid="uid://dfq2n0r22hx8p" path="res://scripts/debug_node.gd" id="3_c6dvc"]
+[ext_resource type="Texture2D" uid="uid://1mu0xpkb3uq2" path="res://assets/UI/kenney_ui-pack-pixel-adventure/Tilesheets/Large tiles/Thin outline/tilemap.png" id="3_xnxdc"]
+[ext_resource type="Texture2D" uid="uid://cv7njrt81c7v6" path="res://assets/BG/IA/iaboatrisingsun.png" id="5_0ehpd"]
+[ext_resource type="Texture2D" uid="uid://calewee1od3mj" path="res://assets/BG/IA/iaboatmiddayf.png" id="6_0ehpd"]
+[ext_resource type="Texture2D" uid="uid://bdocssxey025p" path="res://assets/BG/IA/iaboatevening.png" id="7_8wjpf"]
+[ext_resource type="Script" uid="uid://3sn2qtkef1uy" path="res://scripts/events/lost_cargo_event.gd" id="7_u1u68"]
+[ext_resource type="Texture2D" uid="uid://e2w0ywbuyk5t" path="res://assets/BG/IA/iaboatnight.png" id="8_8wjpf"]
+[ext_resource type="Script" uid="uid://b3iycqskqcs1g" path="res://scripts/events/find_money_event.gd" id="8_x537r"]
+[ext_resource type="Texture2D" uid="uid://b8lfsjw0j0xsk" path="res://assets/BG/IA/iaboatport.png" id="9_2phbr"]
+[ext_resource type="FontFile" uid="uid://csi50wvohxn8" path="res://assets/fonts/kenney_kenney-fonts/Fonts/Kenney Mini.ttf" id="9_08o8g"]
+[ext_resource type="Texture2D" uid="uid://dt624p7bxg6n5" path="res://assets/UI/IconGodotNode/color/icon_meteo.png" id="11_0ehpd"]
+[ext_resource type="Texture2D" uid="uid://guq625ijhecv" path="res://assets/UI/IconGodotNode/color/icon_destroyable_2.png" id="12_8wjpf"]
+[ext_resource type="Texture2D" uid="uid://karr0fgqijcj" path="res://assets/UI/IconGodotNode/node_2D/icon_coin.png" id="13_25dfr"]
+[ext_resource type="Texture2D" uid="uid://c5lghneow5el" path="res://assets/sprites/booktrajetboat.png" id="14_8wjpf"]
+[ext_resource type="Script" uid="uid://b6wxkb6i16i1u" path="res://scripts/traject_book.gd" id="14_25dfr"]
+[ext_resource type="PackedScene" uid="uid://748ug1kpjlyh" path="res://prefabs/event.tscn" id="16_0ehpd"]
+[ext_resource type="Script" uid="uid://c1anowc3sdeve" path="res://scripts/portnamemanager.gd" id="16_kjvyo"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ehpd"]
+texture = ExtResource("1_08o8g")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+24:6/0 = 0
+25:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+21:7/0 = 0
+22:7/0 = 0
+25:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+21:8/0 = 0
+22:8/0 = 0
+25:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+21:9/0 = 0
+22:9/0 = 0
+23:9/0 = 0
+24:9/0 = 0
+25:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+17:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+21:10/0 = 0
+22:10/0 = 0
+23:10/0 = 0
+24:10/0 = 0
+25:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+17:11/0 = 0
+18:11/0 = 0
+21:11/0 = 0
+22:11/0 = 0
+25:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+21:12/0 = 0
+22:12/0 = 0
+25:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+16:13/0 = 0
+17:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+20:13/0 = 0
+21:13/0 = 0
+22:13/0 = 0
+23:13/0 = 0
+24:13/0 = 0
+25:13/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8wjpf"]
+texture = ExtResource("2_0cxu4")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+22:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+22:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_25dfr"]
+texture = ExtResource("3_xnxdc")
+separation = Vector2i(0, 5)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+24:6/0 = 0
+25:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+22:7/0 = 0
+23:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+18:8/0 = 0
+22:8/0 = 0
+23:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+21:9/0 = 0
+22:9/0 = 0
+23:9/0 = 0
+24:9/0 = 0
+25:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+17:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+21:10/0 = 0
+22:10/0 = 0
+23:10/0 = 0
+24:10/0 = 0
+25:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+17:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+21:11/0 = 0
+22:11/0 = 0
+23:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+18:12/0 = 0
+22:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+17:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+21:13/0 = 0
+22:13/0 = 0
+23:13/0 = 0
+25:13/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjvyo"]
+texture = ExtResource("3_xnxdc")
+margins = Vector2i(0, 4)
+separation = Vector2i(4, 3)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+24:6/0 = 0
+25:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+22:7/0 = 0
+23:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+18:8/0 = 0
+22:8/0 = 0
+23:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+21:9/0 = 0
+22:9/0 = 0
+23:9/0 = 0
+24:9/0 = 0
+25:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+17:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+21:10/0 = 0
+22:10/0 = 0
+23:10/0 = 0
+24:10/0 = 0
+25:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+17:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+21:11/0 = 0
+22:11/0 = 0
+23:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+18:12/0 = 0
+22:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+17:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+21:13/0 = 0
+22:13/0 = 0
+23:13/0 = 0
+25:13/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_08o8g"]
+sources/2 = SubResource("TileSetAtlasSource_0ehpd")
+sources/3 = SubResource("TileSetAtlasSource_8wjpf")
+sources/5 = SubResource("TileSetAtlasSource_25dfr")
+sources/6 = SubResource("TileSetAtlasSource_kjvyo")
+
+[sub_resource type="Theme" id="Theme_o3jky"]
+default_font = ExtResource("9_08o8g")
+default_font_size = 20
+
+[sub_resource type="Theme" id="Theme_kjvyo"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_kjvyo"]
 
 [node name="MainScene" type="Node2D"]
-metadata/_edit_group_ = true
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(388.81, -24.22)
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_08o8g")
+format = 2
+layer_0/name = "Back"
+layer_1/name = "Mid"
+layer_1/tile_data = PackedInt32Array(65551, 524290, 2, 262159, 524290, 3, 262166, 589826, 3, 65558, 589826, 2, 196623, 131077, 2, 131087, 131077, 2, 196630, 131077, 268435458, 131094, 131077, 268435458, 262160, 131077, 1879048194, 262161, 131077, 1879048194, 262162, 131077, 1879048194, 262163, 131077, 1879048194, 262164, 131077, 1879048194, 262165, 131077, 1879048194, 65552, 131077, 1073741826, 65553, 131077, 1073741826, 65554, 131077, 1073741826, 65555, 131077, 1073741826, 65556, 131077, 1073741826, 65557, 131077, 1073741826, 131088, 131078, 0, 131089, 131078, 0, 131090, 131078, 0, 131091, 131078, 0, 131092, 131078, 0, 131093, 131078, 0, 196629, 131078, 0, 196628, 131078, 0, 196627, 131078, 0, 196626, 131078, 0, 196625, 131078, 0, 196624, 131078, 0)
+layer_2/name = "Front"
 
 [node name="Background" type="Node2D" parent="."]
+script = ExtResource("1_611at")
+bg_1 = ExtResource("5_0ehpd")
+bg_2 = ExtResource("6_0ehpd")
+bg_3 = ExtResource("7_8wjpf")
+bg_4 = ExtResource("8_8wjpf")
+bg_p = ExtResource("9_2phbr")
 
-[node name="Sprite2D" type="Sprite2D" parent="Background"]
+[node name="Sky" type="TextureRect" parent="Background"]
+offset_top = -15.57
+offset_right = 1920.0
+offset_bottom = 1148.4651
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("9_2phbr")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="Background"]
+offset_left = 69.0
+offset_top = 406.0
+offset_right = 871.0
+offset_bottom = 845.0
+scale = Vector2(0.6799997, 0.48000062)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "MATIN"
+
+[node name="UIPlayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="UIPlayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -963.0
+offset_top = -538.0
+offset_right = 957.0
+offset_bottom = 542.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_o3jky")
+script = ExtResource("2_ibiss")
+
+[node name="InfoContenair" type="VBoxContainer" parent="UIPlayer/HUD"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -535.0
+offset_top = 57.0
+offset_right = -78.0
+offset_bottom = 277.0
+grow_horizontal = 0
+theme_override_constants/separation = 17
+alignment = 1
+
+[node name="DayContainer" type="HBoxContainer" parent="UIPlayer/HUD/InfoContenair"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Icon" type="TextureRect" parent="UIPlayer/HUD/InfoContenair/DayContainer"]
+texture_filter = 1
+clip_contents = true
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("11_0ehpd")
+expand_mode = 2
+
+[node name="DayLabel" type="Label" parent="UIPlayer/HUD/InfoContenair/DayContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Jour :"
+horizontal_alignment = 2
+
+[node name="CargoContainer" type="HBoxContainer" parent="UIPlayer/HUD/InfoContenair"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Icon" type="TextureRect" parent="UIPlayer/HUD/InfoContenair/CargoContainer"]
+texture_filter = 1
+clip_contents = true
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("12_8wjpf")
+stretch_mode = 5
+
+[node name="CargoLabel" type="Label" parent="UIPlayer/HUD/InfoContenair/CargoContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Conteneurs : "
+horizontal_alignment = 2
+
+[node name="MoneyContainer" type="HBoxContainer" parent="UIPlayer/HUD/InfoContenair"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Icon" type="TextureRect" parent="UIPlayer/HUD/InfoContenair/MoneyContainer"]
+texture_filter = 1
+clip_contents = true
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("13_25dfr")
+stretch_mode = 5
+
+[node name="MoneyLabel" type="Label" parent="UIPlayer/HUD/InfoContenair/MoneyContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Argent : "
+horizontal_alignment = 2
+
+[node name="IntegrityLabel" type="Label" parent="UIPlayer/HUD/InfoContenair"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Intégrité : "
+horizontal_alignment = 1
+
+[node name="MoralLabel" type="Label" parent="UIPlayer/HUD/InfoContenair"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Moral de l'équipage :"
+horizontal_alignment = 1
+
+[node name="TrajectBook" type="Control" parent="UIPlayer/HUD"]
+anchors_preset = 0
+offset_left = 139.0
+offset_top = 40.0
+offset_right = 319.0
+offset_bottom = 270.0
+script = ExtResource("14_25dfr")
+
+[node name="PortNameParent" type="Control" parent="UIPlayer/HUD/TrajectBook"]
+z_index = 5
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_kjvyo")
+script = ExtResource("16_kjvyo")
+
+[node name="P1" type="Control" parent="UIPlayer/HUD/TrajectBook/PortNameParent"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SBG" type="TextureRect" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P1"]
+modulate = Color(1, 1, 1, 0.79607844)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 197.0
+offset_top = 103.0
+offset_right = 416.0
+offset_bottom = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_kjvyo")
+
+[node name="Singapour" type="Label" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P1"]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 115.0
+offset_right = 436.0
+offset_bottom = 165.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Singapour"
+
+[node name="P2" type="Control" parent="UIPlayer/HUD/TrajectBook/PortNameParent"]
+visible = false
+anchors_preset = 0
+offset_left = -27.0
+offset_top = 31.0
+offset_right = 13.0
+offset_bottom = 71.0
+
+[node name="SBG2" type="TextureRect" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P2"]
+modulate = Color(1, 1, 1, 0.79607844)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 225.0
+offset_top = 434.0
+offset_right = 442.0
+offset_bottom = 484.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_kjvyo")
+
+[node name="Cái Mép" type="Label" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P2"]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 456.0
+offset_right = 428.0
+offset_bottom = 506.0
+theme_override_font_sizes/font_size = 40
+text = "Cái Mép"
+
+[node name="P3" type="Control" parent="UIPlayer/HUD/TrajectBook/PortNameParent"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SBG3" type="TextureRect" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P3"]
+modulate = Color(1, 1, 1, 0.79607844)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 354.0
+offset_top = 343.0
+offset_right = 529.0
+offset_bottom = 389.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_kjvyo")
+
+[node name="Yantian" type="Label" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P3"]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 357.0
+offset_right = 542.0
+offset_bottom = 407.0
+theme_override_font_sizes/font_size = 40
+text = "Yantian"
+
+[node name="P4" type="Control" parent="UIPlayer/HUD/TrajectBook/PortNameParent"]
+visible = false
+anchors_preset = 0
+offset_left = 17.0
+offset_top = 6.0
+offset_right = 57.0
+offset_bottom = 46.0
+
+[node name="SBG4" type="TextureRect" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P4"]
+modulate = Color(1, 1, 1, 0.79607844)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 622.0
+offset_top = 236.0
+offset_right = 760.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_kjvyo")
+
+[node name="Busan" type="Label" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P4"]
+layout_mode = 0
+offset_left = 653.0
+offset_top = 249.0
+offset_right = 778.0
+offset_bottom = 299.0
+theme_override_font_sizes/font_size = 40
+text = "Busan"
+
+[node name="P5" type="Control" parent="UIPlayer/HUD/TrajectBook/PortNameParent"]
+visible = false
+anchors_preset = 0
+offset_left = 29.0
+offset_top = -13.0
+offset_right = 69.0
+offset_bottom = 27.0
+
+[node name="SBG5" type="TextureRect" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P5"]
+modulate = Color(1, 1, 1, 0.79607844)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 706.0
+offset_top = 105.0
+offset_right = 925.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_kjvyo")
+
+[node name="Yokohama" type="Label" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P5"]
+layout_mode = 0
+offset_left = 736.0
+offset_top = 116.0
+offset_right = 941.0
+offset_bottom = 166.0
+theme_override_font_sizes/font_size = 40
+text = "Yokohama"
+
+[node name="P6" type="Control" parent="UIPlayer/HUD/TrajectBook/PortNameParent"]
+visible = false
+anchors_preset = 0
+offset_left = 32.0
+offset_top = 26.0
+offset_right = 72.0
+offset_bottom = 66.0
+
+[node name="SBG6" type="TextureRect" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P6"]
+modulate = Color(1, 1, 1, 0.79607844)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 709.0
+offset_top = 443.0
+offset_right = 960.0
+offset_bottom = 484.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_kjvyo")
+
+[node name="Los Angeles" type="Label" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P6"]
+layout_mode = 0
+offset_left = 740.0
+offset_top = 456.0
+offset_right = 985.0
+offset_bottom = 506.0
+theme_override_font_sizes/font_size = 39
+text = "Los Angeles"
+
+[node name="BookContainer" type="VBoxContainer" parent="UIPlayer/HUD/TrajectBook"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -98.0
+offset_right = 90.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BookIcon" type="TextureRect" parent="UIPlayer/HUD/TrajectBook/BookContainer"]
+texture_filter = 1
+clip_contents = true
+custom_minimum_size = Vector2(180, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("14_8wjpf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Text" type="Button" parent="UIPlayer/HUD/TrajectBook/BookContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Trajet
+[ ESC ]"
+
+[node name="PortEntryBroadcast" type="Control" parent="UIPlayer/HUD"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BgNotif" type="TextureRect" parent="UIPlayer/HUD/PortEntryBroadcast"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueLayer" type="Control" parent="UIPlayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" type="Control" parent="UIPlayer/DialogueLayer"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonsBar" type="HBoxContainer" parent="UIPlayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="JournalButton" type="Button" parent="UIPlayer/ButtonsBar"]
+layout_mode = 2
+
+[node name="JournalPanel" type="Control" parent="UIPlayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MiniGamePanel" type="Control" parent="UIPlayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EventPopupLayer" type="CanvasLayer" parent="."]
+
+[node name="EventPopUp" type="Control" parent="EventPopupLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Managers" type="Node" parent="."]
+
+[node name="EventList" type="Node" parent="Managers"]
+
+[node name="lost_cargo_event" type="Node" parent="Managers/EventList" node_paths=PackedStringArray("HUD")]
+script = ExtResource("7_u1u68")
+HUD = NodePath("../../../UIPlayer/HUD")
+
+[node name="technical_issue_event" type="Node" parent="Managers/EventList"]
+script = ExtResource("8_x537r")
+
+[node name="event" parent="Managers/EventList" instance=ExtResource("16_0ehpd")]
+
+[node name="DebugNode" type="Node2D" parent="."]
+script = ExtResource("3_c6dvc")
+
+[connection signal="map_closed" from="UIPlayer/HUD/TrajectBook" to="UIPlayer/HUD/TrajectBook/PortNameParent" method="on_map_closed"]
+[connection signal="map_opened" from="UIPlayer/HUD/TrajectBook" to="UIPlayer/HUD/TrajectBook/PortNameParent" method="on_map_opened"]
+[connection signal="button_down" from="UIPlayer/HUD/TrajectBook/BookContainer/Text" to="UIPlayer/HUD/TrajectBook/BookContainer" method="_on_button_button_down"]
+[connection signal="mouse_entered" from="UIPlayer/HUD/TrajectBook/BookContainer/Text" to="UIPlayer/HUD/TrajectBook/BookContainer" method="_on_button_mouse_entered"]

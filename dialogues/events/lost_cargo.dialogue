@@ -1,0 +1,15 @@
+~ start
+Capitaine: Urgence ! Des contenaires tombent a l'eau !
+Capitaine: De violantes vagues frappent le navire, nous risquons de perdre gros ! Que faire ?
+- Tenter de sauver des contenaires
+	do EventChoices.lost_cargo_choice = "save"
+	Capitaine: Parfait, je vous envoie en recuperer le maximum possible
+- Ne rien faire
+	do EventChoices.lost_cargo_choice = "nothing"
+	Capitaine: Si c'est votre choix[wave amp=25 freq=5]...[/wave]
+=> END
+
+~ result
+Capitaine: Tu t'es pas mal debrouillé, on a pu en sauver quelques uns !
+Capitaine: Mais les pertes etaient innévitable, {{EventChoices.last_result}} contenaires sont tombés a l'eau...
+=> END

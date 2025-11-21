@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cyxgoran3pbwu"
+path="res://.godot/imported/port_idle.dialogue-498622ed16cc8473d428fb59acd38fd6.tres"
+
+[deps]
+
+source_file="res://dialogues/port_idle.dialogue"
+dest_files=["res://.godot/imported/port_idle.dialogue-498622ed16cc8473d428fb59acd38fd6.tres"]
+
+[params]
+
+defaults=true

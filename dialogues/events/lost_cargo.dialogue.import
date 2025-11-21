@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://wg1f4guojt7a"
+path="res://.godot/imported/lost_cargo.dialogue-7fc4290162dd63a5575765217330dedb.tres"
+
+[deps]
+
+source_file="res://dialogues/events/lost_cargo.dialogue"
+dest_files=["res://.godot/imported/lost_cargo.dialogue-7fc4290162dd63a5575765217330dedb.tres"]
+
+[params]
+
+defaults=true
