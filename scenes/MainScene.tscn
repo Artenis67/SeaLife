@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b3q3v11153op3"]
+[gd_scene load_steps=35 format=3 uid="uid://b3q3v11153op3"]
 
 [ext_resource type="Texture2D" uid="uid://da5x03pdgl0kj" path="res://assets/UI/kenney_ui-pack-pixel-adventure/Tilesheets/Large tiles/Thick outline/tilemap_packed.png" id="1_08o8g"]
 [ext_resource type="Script" uid="uid://bpfv67ofqxsv2" path="res://scripts/backgroundmanager.gd" id="1_611at"]
@@ -21,6 +21,11 @@
 [ext_resource type="Script" uid="uid://b6wxkb6i16i1u" path="res://scripts/traject_book.gd" id="14_25dfr"]
 [ext_resource type="PackedScene" uid="uid://748ug1kpjlyh" path="res://prefabs/event.tscn" id="16_0ehpd"]
 [ext_resource type="Script" uid="uid://c1anowc3sdeve" path="res://scripts/portnamemanager.gd" id="16_kjvyo"]
+[ext_resource type="Script" uid="uid://eiqripupqmhb" path="res://scripts/pulse_anim.gd" id="17_mkg2b"]
+[ext_resource type="Texture2D" uid="uid://37o2ocddk4e3" path="res://assets/UI/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0043.png" id="19_ye0jt"]
+[ext_resource type="Texture2D" uid="uid://073fio2sgpoi" path="res://assets/UI/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0044.png" id="20_7wwop"]
+[ext_resource type="Texture2D" uid="uid://cin5mof7reifl" path="res://assets/UI/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0045.png" id="21_jcw2p"]
+[ext_resource type="Texture2D" uid="uid://b535agymftbqq" path="res://assets/UI/IconGodotNode/node/icon_flag.png" id="22_7wwop"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ehpd"]
 texture = ExtResource("1_08o8g")
@@ -1264,222 +1269,15 @@ text = "Moral de l'équipage :"
 horizontal_alignment = 1
 
 [node name="TrajectBook" type="Control" parent="UIPlayer/HUD"]
-anchors_preset = 0
-offset_left = 139.0
-offset_top = 40.0
-offset_right = 319.0
-offset_bottom = 270.0
+layout_mode = 1
+anchor_left = 0.072000004
+anchor_top = 0.037
+anchor_right = 0.16600001
+anchor_bottom = 0.25
+offset_left = 0.7599945
+offset_top = 0.040000916
+offset_right = 0.27996826
 script = ExtResource("14_25dfr")
-
-[node name="PortNameParent" type="Control" parent="UIPlayer/HUD/TrajectBook"]
-z_index = 5
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-theme = SubResource("Theme_kjvyo")
-script = ExtResource("16_kjvyo")
-
-[node name="P1" type="Control" parent="UIPlayer/HUD/TrajectBook/PortNameParent"]
-visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="SBG" type="TextureRect" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P1"]
-modulate = Color(1, 1, 1, 0.79607844)
-self_modulate = Color(0, 0, 0, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 197.0
-offset_top = 103.0
-offset_right = 416.0
-offset_bottom = 144.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("CanvasTexture_kjvyo")
-
-[node name="Singapour" type="Label" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P1"]
-layout_mode = 0
-offset_left = 226.0
-offset_top = 115.0
-offset_right = 436.0
-offset_bottom = 165.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "Singapour"
-
-[node name="P2" type="Control" parent="UIPlayer/HUD/TrajectBook/PortNameParent"]
-visible = false
-anchors_preset = 0
-offset_left = -27.0
-offset_top = 31.0
-offset_right = 13.0
-offset_bottom = 71.0
-
-[node name="SBG2" type="TextureRect" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P2"]
-modulate = Color(1, 1, 1, 0.79607844)
-self_modulate = Color(0, 0, 0, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 225.0
-offset_top = 434.0
-offset_right = 442.0
-offset_bottom = 484.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("CanvasTexture_kjvyo")
-
-[node name="Cái Mép" type="Label" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P2"]
-layout_mode = 0
-offset_left = 278.0
-offset_top = 456.0
-offset_right = 428.0
-offset_bottom = 506.0
-theme_override_font_sizes/font_size = 40
-text = "Cái Mép"
-
-[node name="P3" type="Control" parent="UIPlayer/HUD/TrajectBook/PortNameParent"]
-visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="SBG3" type="TextureRect" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P3"]
-modulate = Color(1, 1, 1, 0.79607844)
-self_modulate = Color(0, 0, 0, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 354.0
-offset_top = 343.0
-offset_right = 529.0
-offset_bottom = 389.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("CanvasTexture_kjvyo")
-
-[node name="Yantian" type="Label" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P3"]
-layout_mode = 0
-offset_left = 387.0
-offset_top = 357.0
-offset_right = 542.0
-offset_bottom = 407.0
-theme_override_font_sizes/font_size = 40
-text = "Yantian"
-
-[node name="P4" type="Control" parent="UIPlayer/HUD/TrajectBook/PortNameParent"]
-visible = false
-anchors_preset = 0
-offset_left = 17.0
-offset_top = 6.0
-offset_right = 57.0
-offset_bottom = 46.0
-
-[node name="SBG4" type="TextureRect" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P4"]
-modulate = Color(1, 1, 1, 0.79607844)
-self_modulate = Color(0, 0, 0, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 622.0
-offset_top = 236.0
-offset_right = 760.0
-offset_bottom = 280.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("CanvasTexture_kjvyo")
-
-[node name="Busan" type="Label" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P4"]
-layout_mode = 0
-offset_left = 653.0
-offset_top = 249.0
-offset_right = 778.0
-offset_bottom = 299.0
-theme_override_font_sizes/font_size = 40
-text = "Busan"
-
-[node name="P5" type="Control" parent="UIPlayer/HUD/TrajectBook/PortNameParent"]
-visible = false
-anchors_preset = 0
-offset_left = 29.0
-offset_top = -13.0
-offset_right = 69.0
-offset_bottom = 27.0
-
-[node name="SBG5" type="TextureRect" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P5"]
-modulate = Color(1, 1, 1, 0.79607844)
-self_modulate = Color(0, 0, 0, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 706.0
-offset_top = 105.0
-offset_right = 925.0
-offset_bottom = 146.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("CanvasTexture_kjvyo")
-
-[node name="Yokohama" type="Label" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P5"]
-layout_mode = 0
-offset_left = 736.0
-offset_top = 116.0
-offset_right = 941.0
-offset_bottom = 166.0
-theme_override_font_sizes/font_size = 40
-text = "Yokohama"
-
-[node name="P6" type="Control" parent="UIPlayer/HUD/TrajectBook/PortNameParent"]
-visible = false
-anchors_preset = 0
-offset_left = 32.0
-offset_top = 26.0
-offset_right = 72.0
-offset_bottom = 66.0
-
-[node name="SBG6" type="TextureRect" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P6"]
-modulate = Color(1, 1, 1, 0.79607844)
-self_modulate = Color(0, 0, 0, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 709.0
-offset_top = 443.0
-offset_right = 960.0
-offset_bottom = 484.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("CanvasTexture_kjvyo")
-
-[node name="Los Angeles" type="Label" parent="UIPlayer/HUD/TrajectBook/PortNameParent/P6"]
-layout_mode = 0
-offset_left = 740.0
-offset_top = 456.0
-offset_right = 985.0
-offset_bottom = 506.0
-theme_override_font_sizes/font_size = 39
-text = "Los Angeles"
 
 [node name="BookContainer" type="VBoxContainer" parent="UIPlayer/HUD/TrajectBook"]
 texture_filter = 1
@@ -1513,15 +1311,364 @@ theme_override_font_sizes/font_size = 25
 text = "Trajet
 [ ESC ]"
 
-[node name="PortEntryBroadcast" type="Control" parent="UIPlayer/HUD"]
+[node name="PortNameParent" type="Control" parent="UIPlayer/HUD"]
+z_index = 5
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 139.0
+offset_top = 40.0
+offset_right = 1367.0
+offset_bottom = 702.0
+theme = SubResource("Theme_kjvyo")
+script = ExtResource("16_kjvyo")
 
-[node name="BgNotif" type="TextureRect" parent="UIPlayer/HUD/PortEntryBroadcast"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="P1" type="Control" parent="UIPlayer/HUD/PortNameParent"]
+visible = false
+anchors_preset = 0
+offset_left = 209.0
+offset_top = 123.0
+offset_right = 412.0
+offset_bottom = 163.0
+script = ExtResource("17_mkg2b")
+
+[node name="SBG" type="TextureRect" parent="UIPlayer/HUD/PortNameParent/P1"]
+modulate = Color(1, 1, 1, 0.79607844)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = -3.0
+offset_right = 12.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_kjvyo")
+
+[node name="Singapour" type="Label" parent="UIPlayer/HUD/PortNameParent/P1"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Singapour"
+
+[node name="P2" type="Control" parent="UIPlayer/HUD/PortNameParent"]
+visible = false
+anchors_preset = 0
+offset_left = 240.0
+offset_top = 482.0
+offset_right = 440.0
+offset_bottom = 522.0
+script = ExtResource("17_mkg2b")
+
+[node name="SBG2" type="TextureRect" parent="UIPlayer/HUD/PortNameParent/P2"]
+modulate = Color(1, 1, 1, 0.79607844)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_kjvyo")
+
+[node name="Cái Mép" type="Label" parent="UIPlayer/HUD/PortNameParent/P2"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_right = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Cái Mép"
+
+[node name="P3" type="Control" parent="UIPlayer/HUD/PortNameParent"]
+visible = false
+anchors_preset = 0
+offset_left = 349.0
+offset_top = 367.0
+offset_right = 543.0
+offset_bottom = 405.0
+script = ExtResource("17_mkg2b")
+
+[node name="SBG3" type="TextureRect" parent="UIPlayer/HUD/PortNameParent/P3"]
+modulate = Color(1, 1, 1, 0.79607844)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_kjvyo")
+
+[node name="Yantian" type="Label" parent="UIPlayer/HUD/PortNameParent/P3"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.5
+offset_right = 77.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Yantian"
+
+[node name="P4" type="Control" parent="UIPlayer/HUD/PortNameParent"]
+visible = false
+anchors_preset = 0
+offset_left = 657.0
+offset_top = 262.0
+offset_right = 798.0
+offset_bottom = 303.0
+script = ExtResource("17_mkg2b")
+
+[node name="SBG4" type="TextureRect" parent="UIPlayer/HUD/PortNameParent/P4"]
+modulate = Color(1, 1, 1, 0.79607844)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_kjvyo")
+
+[node name="Busan" type="Label" parent="UIPlayer/HUD/PortNameParent/P4"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -62.5
+offset_right = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Busan"
+
+[node name="P5" type="Control" parent="UIPlayer/HUD/PortNameParent"]
+visible = false
+anchors_preset = 0
+offset_left = 762.0
+offset_top = 112.0
+offset_right = 977.0
+offset_bottom = 156.0
+script = ExtResource("17_mkg2b")
+
+[node name="SBG5" type="TextureRect" parent="UIPlayer/HUD/PortNameParent/P5"]
+modulate = Color(1, 1, 1, 0.79607844)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_kjvyo")
+
+[node name="Yokohama" type="Label" parent="UIPlayer/HUD/PortNameParent/P5"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -102.5
+offset_right = 102.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Yokohama"
+
+[node name="P6" type="Control" parent="UIPlayer/HUD/PortNameParent"]
+visible = false
+anchors_preset = 0
+offset_left = 762.0
+offset_top = 486.0
+offset_right = 1013.0
+offset_bottom = 531.0
+script = ExtResource("17_mkg2b")
+
+[node name="SBG6" type="TextureRect" parent="UIPlayer/HUD/PortNameParent/P6"]
+modulate = Color(1, 1, 1, 0.79607844)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_kjvyo")
+
+[node name="Los Angeles" type="Label" parent="UIPlayer/HUD/PortNameParent/P6"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -119.5
+offset_right = 119.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 39
+text = "Los Angeles"
+
+[node name="PortEntryBroadcast" type="Control" parent="UIPlayer/HUD"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -474.99994
+offset_top = 59.0
+offset_right = 56.00006
+offset_bottom = 236.0
+grow_horizontal = 2
+scale = Vector2(1.31, 1.31)
+
+[node name="BgNotif1" type="TextureRect" parent="UIPlayer/HUD/PortEntryBroadcast"]
+texture_filter = 1
+clip_contents = true
+custom_minimum_size = Vector2(170, 170)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -254.145
+offset_top = -85.1
+offset_right = -84.14485
+offset_bottom = 84.899994
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("19_ye0jt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BgNotif2" type="TextureRect" parent="UIPlayer/HUD/PortEntryBroadcast"]
+texture_filter = 1
+clip_contents = true
+custom_minimum_size = Vector2(170, 170)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_7wwop")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BgNotif3" type="TextureRect" parent="UIPlayer/HUD/PortEntryBroadcast"]
+texture_filter = 1
+clip_contents = true
+custom_minimum_size = Vector2(170, 170)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 85.375
+offset_top = -85.0
+offset_right = 255.37524
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_jcw2p")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="UIPlayer/HUD/PortEntryBroadcast"]
+texture_filter = 1
+custom_minimum_size = Vector2(9.65, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -188.40079
+offset_top = -28.194649
+offset_right = -137.40079
+offset_bottom = 22.805351
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_7wwop")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="UIPlayer/HUD/PortEntryBroadcast"]
+texture_filter = 1
+custom_minimum_size = Vector2(9.65, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 139.32999
+offset_top = -28.195
+offset_right = 190.32999
+offset_bottom = 22.805
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_7wwop")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HeadNotif" type="Label" parent="UIPlayer/HUD/PortEntryBroadcast"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.713806
+offset_top = -20.561066
+offset_right = 77.24805
+offset_bottom = 11.309166
+grow_horizontal = 2
+grow_vertical = 2
+text = "Nouveau Port"
+horizontal_alignment = 1
+
+[node name="PortName" type="Label" parent="UIPlayer/HUD/PortEntryBroadcast"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.713806
+offset_top = 12.263367
+offset_right = 77.24805
+offset_bottom = 38.21756
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 23
+text = "Singapour"
+horizontal_alignment = 1
 
 [node name="DialogueLayer" type="Control" parent="UIPlayer"]
 layout_mode = 3
@@ -1577,7 +1724,7 @@ script = ExtResource("8_x537r")
 [node name="DebugNode" type="Node2D" parent="."]
 script = ExtResource("3_c6dvc")
 
-[connection signal="map_closed" from="UIPlayer/HUD/TrajectBook" to="UIPlayer/HUD/TrajectBook/PortNameParent" method="on_map_closed"]
-[connection signal="map_opened" from="UIPlayer/HUD/TrajectBook" to="UIPlayer/HUD/TrajectBook/PortNameParent" method="on_map_opened"]
+[connection signal="map_closed" from="UIPlayer/HUD/TrajectBook" to="UIPlayer/HUD/PortNameParent" method="on_map_closed"]
+[connection signal="map_opened" from="UIPlayer/HUD/TrajectBook" to="UIPlayer/HUD/PortNameParent" method="on_map_opened"]
 [connection signal="button_down" from="UIPlayer/HUD/TrajectBook/BookContainer/Text" to="UIPlayer/HUD/TrajectBook/BookContainer" method="_on_button_button_down"]
 [connection signal="mouse_entered" from="UIPlayer/HUD/TrajectBook/BookContainer/Text" to="UIPlayer/HUD/TrajectBook/BookContainer" method="_on_button_mouse_entered"]

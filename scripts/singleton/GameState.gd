@@ -4,8 +4,13 @@ extends Node
 signal hud_value_changed
 signal change_time_of_the_day
 
+# Moments de la journée
+const TIME_MORNING := 1
+const TIME_NOON := 2
+const TIME_EVENING := 3
+
 var day: int = 1
-var time_of_day: int = 1  # 1:"morning", 2:"noon", 3:"evening"
+var time_of_day: int = TIME_MORNING  # 1:"morning", 2:"noon", 3:"evening"
 var current_port: String = ""
 var current_port_n: int = 0
 var in_sea: bool = false
@@ -18,6 +23,11 @@ var crew_morale: int = 80
 var money: int = 0
 
 var technical_issue: bool = false
+
+
+func _ready() -> void:
+	# On lance la logique du "moment courant" dès le début du jeu
+	DayFlowManager.on_time_advanced()
 
 
 ##############################
@@ -64,20 +74,15 @@ func heal_integrity(amount: int) -> void:
 # TEMPS (JOUR / MOMENT)
 ##############################
 
-# ⚠️ NE PAS SUPPRIMER : tous tes vieux scripts continuent d'appeler ça.
-# On garde la même signature, mais à la fin on délègue la logique à DayFlowManager.
 func advance_time_of_day() -> void:
-	if time_of_day < 3:
+	if time_of_day < TIME_EVENING:
 		time_of_day += 1
 	else:
 		advance_day()
-		time_of_day = 1
+		time_of_day = TIME_MORNING
 
+	GameManager.check_traject_port()
 	change_time_of_the_day.emit()
-	print(time_of_day)
-
-	# NEW : on prévient le DayFlowManager que le temps a avancé.
-	# Tous les events / dialogues automatiques partent d'ici.
 	DayFlowManager.on_time_advanced()
 
 
@@ -85,17 +90,14 @@ func advance_day() -> void:
 	day += 1
 	hud_value_changed.emit()
 
-
 func set_time_of_day(time: int) -> void:
-	if time < 4:
-		time_of_day = time
+	if time < 1 or time > TIME_EVENING:
+		print("Time too high or invalid, reset to morning")
+		time_of_day = TIME_MORNING
 	else:
-		print("Time too high")
-		time_of_day = 1
+		time_of_day = time
 
 	change_time_of_the_day.emit()
-
-	# Si quelqu'un change le moment directement, on applique quand même la logique.
 	DayFlowManager.on_time_advanced()
 
 
@@ -104,7 +106,6 @@ func set_time_of_day(time: int) -> void:
 ##############################
 
 func add_money(amount: int) -> void:
-	print(money)
 	money += amount
 	hud_value_changed.emit()
 

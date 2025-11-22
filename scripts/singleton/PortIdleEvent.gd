@@ -1,3 +1,4 @@
+# Scripts/PortIdleEvent.gd
 extends Node
 
 var dialogue: DialogueResource = load("res://dialogues/port_idle.dialogue")
@@ -9,6 +10,7 @@ func start_port_idle_dialogue() -> void:
 		DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
 	DialogueManager.show_dialogue_balloon(dialogue, "start")
+
 
 func _on_dialogue_ended(resource: DialogueResource) -> void:
 	# On vérifie que c'est bien notre dialogue

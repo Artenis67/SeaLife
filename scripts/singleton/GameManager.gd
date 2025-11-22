@@ -1,73 +1,85 @@
+# Scripts/GameManager.gd
 extends Node
 
 const FIRST_STEPS_DG := preload("res://dialogues/first_steps.dialogue")
-const MORNING_DG := preload("res://dialogues/morning.dialogue")
-const EVENING_DG := preload("res://dialogues/evening.dialogue")
+const MORNING_DG     := preload("res://dialogues/morning.dialogue")
+const EVENING_DG     := preload("res://dialogues/evening.dialogue")
 
-var intro_finished = false
-var day_finished = false
+var intro_finished: bool = false
+
+var _current_dialogue: DialogueResource = null
+
 
 func _ready() -> void:
+	check_traject_port()
 	print("GameManager loaded")
-	if GameState.day == 1:
-		first_steps()
+	# On ne lance plus l’intro ici.
+	# C'est DayFlowManager.on_time_advanced() qui appellera first_steps()
+	# au premier matin (day 1).
+
+
+##############################
+# DIALOGUES
+##############################
+
+func _connect_dialogue_ended() -> void:
+	if not DialogueManager.dialogue_ended.is_connected(_on_dialogue_ended):
+		DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
 
 func first_steps() -> void:
+	_current_dialogue = FIRST_STEPS_DG
+	_connect_dialogue_ended()
 	DialogueManager.show_dialogue_balloon(FIRST_STEPS_DG, "start")
-	DialogueManager.dialogue_ended.connect(_on_first_steps_dialogue_ended)
 
 
-func _on_first_steps_dialogue_ended(resource: DialogueResource) -> void:
-	if resource != FIRST_STEPS_DG:
-		return
-	DialogueManager.dialogue_ended.disconnect(_on_first_steps_dialogue_ended)
-	
-	_on_first_steps_finished()
-
-
-func _on_first_steps_finished() -> void:
-	intro_finished = true
-	GameState.advance_time_of_day()
-	check_day_cycle()
-
-func check_day_cycle():
-	print("CheckDayCycle Of Game Manager launched")
-	if GameState.time_of_day == 1 && intro_finished:
-		morning_dialogue()
-	if GameState.time_of_day == 2:
-		EventManager.choose_event()
-	if GameState.time_of_day == 3:
-		evening_dialogue()
-
-func morning_dialogue():
+func morning_dialogue() -> void:
+	_current_dialogue = MORNING_DG
+	_connect_dialogue_ended()
 	DialogueManager.show_dialogue_balloon(MORNING_DG, "start")
-	DialogueManager.dialogue_ended.connect(morning_dialogue_finished)
 
-func morning_dialogue_finished(resource: DialogueResource):
-	if resource != MORNING_DG:
-		return
-	DialogueManager.dialogue_ended.disconnect(evening_dialogue_finished)
-	GameState.advance_time_of_day()
-	check_day_cycle()
 
-func evening_dialogue():
+func evening_dialogue() -> void:
+	_current_dialogue = EVENING_DG
+	_connect_dialogue_ended()
 	DialogueManager.show_dialogue_balloon(EVENING_DG, "start")
-	DialogueManager.dialogue_ended.connect(evening_dialogue_finished)
 
-func evening_dialogue_finished(resource: DialogueResource):
-	if resource != EVENING_DG:
+
+func _on_dialogue_ended(resource: DialogueResource) -> void:
+	# On ignore les dialogues qui ne viennent pas de nous
+	if resource != _current_dialogue:
 		return
-	DialogueManager.dialogue_ended.disconnect(evening_dialogue_finished)
-	GameState.advance_time_of_day()
-	check_day_cycle()
 
-func event_finished():
-	GameState.advance_time_of_day()
-	check_day_cycle()
+	if DialogueManager.dialogue_ended.is_connected(_on_dialogue_ended):
+		DialogueManager.dialogue_ended.disconnect(_on_dialogue_ended)
 
-func check_traject_port():
-	print("Jour :" + str(GameState.day))
+	# Logique spécifique selon le dialogue
+	if resource == FIRST_STEPS_DG:
+		intro_finished = true
+
+	# On nettoie le pointeur
+	_current_dialogue = null
+
+	# Dans tous les cas : un dialogue fini = on avance au moment suivant
+	GameState.advance_time_of_day()
+
+
+##############################
+# FIN D'ÉVÈNEMENT / MINI-JEU
+##############################
+
+func event_finished() -> void:
+	# — À APPELER à la fin d'un event ou d'un mini-jeu —
+	EventManager.is_in_event = false
+	GameState.advance_time_of_day()
+
+
+##############################
+# ROUTE / PORTS
+##############################
+
+func check_traject_port() -> void:
+	print("Jour :", GameState.day)
 	match GameState.day:
 		1:
 			GameState.current_port_n = 1
@@ -75,7 +87,7 @@ func check_traject_port():
 			GameState.in_sea = false
 		2:
 			GameState.in_sea = true
-		6:
+		3:
 			GameState.current_port_n = 2
 			GameState.current_port = "Cái Mép"
 			GameState.in_sea = false

@@ -5,12 +5,12 @@ var is_in_event: bool = false
 
 signal lost_cargo
 signal technical_issue
-signal lost_money
+signal debug_event
 
 var events: Array = [
-	{"id": "lost_cargo", "weight": 0.5},
-	{"id": "technical_issue", "weight": 0.5},
-	{"id": "lost_money", "weight": 0.0},
+	{"id": "lost_cargo", "weight": 0},
+	{"id": "technical_issue", "weight": 0},
+	{"id": "debug_event", "weight": 1},
 ]
 
 
@@ -38,5 +38,7 @@ func _start_event(_event: Dictionary) -> void:
 	is_in_event = true
 	emit_signal(_event["id"])
 
+
+# Alias si tu l’utilises encore quelque part
 func choose_event() -> void:
 	start_random_event()

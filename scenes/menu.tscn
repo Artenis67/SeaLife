@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs4choq36hky8"]
+
+[ext_resource type="FontFile" uid="uid://csi50wvohxn8" path="res://assets/fonts/kenney_kenney-fonts/Fonts/Kenney Mini.ttf" id="1_con2f"]
+[ext_resource type="Texture2D" uid="uid://cms7n3dsuimbp" path="res://assets/BG/IA/firstscreen.png" id="1_yqeox"]
+[ext_resource type="Script" uid="uid://dckrj56k4cdru" path="res://scripts/hudmanager.gd" id="2_mhnvy"]
+
+[sub_resource type="Theme" id="Theme_4ytvr"]
+default_font = ExtResource("1_con2f")
+default_font_size = 20
+
+[node name="Menu" type="Node2D"]
+
+[node name="Layer" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="Layer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -963.0
+offset_top = -538.0
+offset_right = 957.0
+offset_bottom = 542.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_4ytvr")
+script = ExtResource("2_mhnvy")
+
+[node name="background" type="TextureRect" parent="Layer/HUD"]
+clip_contents = true
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -957.0
+offset_top = -542.0
+offset_right = 963.0
+offset_bottom = 725.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yqeox")
+stretch_mode = 5
+
+[node name="StartButton" type="Button" parent="Layer/HUD"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 362.0
+offset_top = -208.0
+offset_right = 470.0
+offset_bottom = -175.0
+grow_vertical = 0
+text = "Naviguer "
