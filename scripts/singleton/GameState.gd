@@ -103,7 +103,7 @@ func heal_integrity(amount: int) -> void:
 
 func advance_time_of_day() -> void:
 	if time_of_day < TIME_EVENING:
-		if day == 29:
+		if day == 28:
 			GameManager.finish_game()
 			return
 		else:

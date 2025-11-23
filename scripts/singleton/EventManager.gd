@@ -2,6 +2,7 @@
 extends Node
 
 var is_in_event: bool = false
+
 ################################
 # SIGNAUX D'ÉVÉNEMENTS
 ################################
@@ -26,6 +27,13 @@ signal customs_inspection
 signal dangerous_cargo
 signal overweight_block
 signal storm
+
+signal navigation_failure
+signal pirates_far
+signal military_inspection
+signal quick_contract
+signal fuel_discount
+signal kidnapping
 
 signal debug_event
 
@@ -52,10 +60,18 @@ var events: Array = [
 
 	# nouveaux events ultra réalistes
 	{"id": "reefer_issue",        "weight": 0.1},
-	{"id": "customs_inspection",  "weight": 01000.1},
+	{"id": "customs_inspection",  "weight": 0.1},
 	{"id": "dangerous_cargo",     "weight": 0.1},
 	{"id": "overweight_block",    "weight": 0.1},
-	{"id": "storm", "weight": 0.3},
+	{"id": "storm",               "weight": 0.3},
+
+	# events inspirés de ta liste
+	{"id": "navigation_failure",  "weight": 0.1},
+	{"id": "pirates_far",         "weight": 0.1},
+	{"id": "military_inspection", "weight": 0.1},
+	{"id": "quick_contract",      "weight": 0.1},
+	{"id": "fuel_discount",       "weight": 0.1},
+	{"id": "kidnapping",          "weight": 0.1},
 
 	# debug
 	{"id": "debug_event",         "weight": 0.0},

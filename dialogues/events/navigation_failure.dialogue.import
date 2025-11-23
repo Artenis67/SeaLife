@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cigt3hbkx6h3o"
+path="res://.godot/imported/navigation_failure.dialogue-b4f58075bcb0ba98c5efd10452b210fe.tres"
+
+[deps]
+
+source_file="res://dialogues/events/navigation_failure.dialogue"
+dest_files=["res://.godot/imported/navigation_failure.dialogue-b4f58075bcb0ba98c5efd10452b210fe.tres"]
+
+[params]
+
+defaults=true

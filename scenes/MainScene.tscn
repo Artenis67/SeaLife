@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://b3q3v11153op3"]
+[gd_scene load_steps=61 format=3 uid="uid://b3q3v11153op3"]
 
 [ext_resource type="Texture2D" uid="uid://da5x03pdgl0kj" path="res://assets/UI/kenney_ui-pack-pixel-adventure/Tilesheets/Large tiles/Thick outline/tilemap_packed.png" id="1_08o8g"]
 [ext_resource type="Script" uid="uid://bpfv67ofqxsv2" path="res://scripts/backgroundmanager.gd" id="1_611at"]
@@ -44,6 +44,12 @@
 [ext_resource type="Script" uid="uid://xcpupw1rcdc4" path="res://scripts/events/dangerous_cargo_event.gd" id="39_doyhq"]
 [ext_resource type="Script" uid="uid://cp7h777vxc4uk" path="res://scripts/events/overweight_block_event.gd" id="40_2so2y"]
 [ext_resource type="Script" uid="uid://dsw7yofsnvgew" path="res://scripts/events/storm_event.gd" id="41_7yh6i"]
+[ext_resource type="Script" uid="uid://d2e0v6f6qecly" path="res://scripts/events/NavigationFailureEvent.gd" id="42_pwxld"]
+[ext_resource type="Script" uid="uid://dtrf68hh32y3" path="res://scripts/events/pirates_far_event.gd" id="43_cw1g3"]
+[ext_resource type="Script" uid="uid://ratuwcena0qi" path="res://scripts/events/military_inspection_event.gd" id="44_yc0gu"]
+[ext_resource type="Script" uid="uid://dukjp2u3gxtqg" path="res://scripts/events/quick_contract_event.gd" id="45_qnen4"]
+[ext_resource type="Script" uid="uid://b70ohyjwqfg6q" path="res://scripts/events/fuel_discount_event.gd" id="46_q5chl"]
+[ext_resource type="Script" uid="uid://itpsh4uf5nom" path="res://scripts/events/kidnapping_event.gd" id="47_j2mks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ehpd"]
 texture = ExtResource("1_08o8g")
@@ -1342,7 +1348,7 @@ stretch_mode = 5
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Trajet
-[ ESC ]"
+[ TAB ]"
 
 [node name="PortNameParent" type="Control" parent="UIPlayer/HUD"]
 z_index = 5
@@ -1804,6 +1810,24 @@ script = ExtResource("40_2so2y")
 script = ExtResource("41_7yh6i")
 HUD = NodePath("../../../UIPlayer/HUD")
 _TileMap = NodePath("../../../TileMap")
+
+[node name="NavigationFailureEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("42_pwxld")
+
+[node name="PiratesFarEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("43_cw1g3")
+
+[node name="MilitaryInspectionEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("44_yc0gu")
+
+[node name="QuickContractEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("45_qnen4")
+
+[node name="FuelDiscountEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("46_q5chl")
+
+[node name="KidnappingEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("47_j2mks")
 
 [node name="event" parent="Managers/EventList" instance=ExtResource("16_0ehpd")]
 

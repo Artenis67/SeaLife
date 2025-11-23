@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://vgyocybvgwfb"]
+[gd_scene load_steps=23 format=3 uid="uid://vgyocybvgwfb"]
 
 [ext_resource type="Texture2D" uid="uid://kmb7ptk8d87o" path="res://assets/BG/IA/endbg.png" id="1_ctl4c"]
 [ext_resource type="Script" uid="uid://dh6pdku6t54he" path="res://scripts/spawner.gd" id="2_1qvcv"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://c2278uhgq8c22" path="res://assets/sprites/dialogue/Technicien/portrait.png" id="10_yc0go"]
 [ext_resource type="Texture2D" uid="uid://x8urfgptgoie" path="res://assets/sprites/dialogue/Mécanicien/portrait.png" id="18_7oqat"]
 [ext_resource type="Texture2D" uid="uid://c8v6kg71l1sgl" path="res://assets/sprites/dialogue/Officier/portrait.png" id="19_djy0y"]
+[ext_resource type="Texture2D" uid="uid://bq2snb2xigirr" path="res://assets/sprites/dialogue/Dockmaster/portrait.png" id="20_1gxji"]
 
 [sub_resource type="Theme" id="Theme_1gxji"]
 default_font = ExtResource("2_yc0go")
@@ -175,7 +176,7 @@ curve = SubResource("Curve2D_ctl4c")
 
 [node name="Spawner" type="Node2D" parent="Path2D"]
 script = ExtResource("2_1qvcv")
-textures = Array[Texture2D]([ExtResource("3_2vves"), ExtResource("4_s20jw"), ExtResource("5_samt8"), ExtResource("6_q1sp7"), ExtResource("7_n44ar"), ExtResource("8_vb7yq"), ExtResource("9_rgc5h"), ExtResource("10_yc0go"), ExtResource("18_7oqat"), ExtResource("19_djy0y")])
+textures = Array[Texture2D]([ExtResource("3_2vves"), ExtResource("4_s20jw"), ExtResource("5_samt8"), ExtResource("6_q1sp7"), ExtResource("7_n44ar"), ExtResource("8_vb7yq"), ExtResource("9_rgc5h"), ExtResource("10_yc0go"), ExtResource("18_7oqat"), ExtResource("19_djy0y"), ExtResource("20_1gxji")])
 _rotation = 90
 
 [node name="Path2D2" type="Path2D" parent="."]

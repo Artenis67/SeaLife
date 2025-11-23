@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cvv0w3nv8nwtt"
+path="res://.godot/imported/pirates_far.dialogue-dff5d1cb30ba63a52c9e55019e65853b.tres"
+
+[deps]
+
+source_file="res://dialogues/events/pirates_far.dialogue"
+dest_files=["res://.godot/imported/pirates_far.dialogue-dff5d1cb30ba63a52c9e55019e65853b.tres"]
+
+[params]
+
+defaults=true

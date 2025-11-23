@@ -1,0 +1,6 @@
+~ start
+Matelot: Capitaine ! Le port offre une réduction exceptionnelle sur le carburant aujourd’hui.
+Capitaine: Sérieux ? Ça ne court pas les quais ce genre d’offre.
+Matelot: Si on remplit maintenant, on économise [color=green]+1000$[/color] sur la traversée.
+Capitaine: Alors ne traînons pas. Fais remplir les soutes.
+=> END

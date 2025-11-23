@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ceuklvwjqp2gw"
+path="res://.godot/imported/kidnapping.dialogue-55e14bcfd8f4f90719cb0979882881c4.tres"
+
+[deps]
+
+source_file="res://dialogues/events/kidnapping.dialogue"
+dest_files=["res://.godot/imported/kidnapping.dialogue-55e14bcfd8f4f90719cb0979882881c4.tres"]
+
+[params]
+
+defaults=true

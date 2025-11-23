@@ -1,0 +1,20 @@
+~ start
+Officier: Capitaine ! Réveil d’urgence !
+Capitaine: Qu’est-ce qui se passe ?
+Officier: Deux membres de l’équipage ont disparu cette nuit…
+Capitaine: Quoi ? Comment ça disparu ?
+Officier: On a reçu un message radio crypté à l’instant. Ils réclament [color=green]-2000$[/color] pour les libérer.
+Capitaine: …
+- Payer la rançon
+    Capitaine: On ne laisse personne derrière. Prépare le transfert.
+    => pay
+- Refuser
+    Capitaine: On ne négocie pas avec ça. On continue la route.
+    => refuse
+=> END
+
+~ pay
+=> END
+
+~ refuse
+=> END

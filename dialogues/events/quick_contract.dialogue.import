@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://byx7bs652h7dy"
+path="res://.godot/imported/quick_contract.dialogue-17023cfb3cd88cbdceae946f4c8a205f.tres"
+
+[deps]
+
+source_file="res://dialogues/events/quick_contract.dialogue"
+dest_files=["res://.godot/imported/quick_contract.dialogue-17023cfb3cd88cbdceae946f4c8a205f.tres"]
+
+[params]
+
+defaults=true

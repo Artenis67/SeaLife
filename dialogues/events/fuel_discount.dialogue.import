@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dmck11nkml24u"
+path="res://.godot/imported/fuel_discount.dialogue-b6260e149f40c7c55b9f955a73a7e64a.tres"
+
+[deps]
+
+source_file="res://dialogues/events/fuel_discount.dialogue"
+dest_files=["res://.godot/imported/fuel_discount.dialogue-b6260e149f40c7c55b9f955a73a7e64a.tres"]
+
+[params]
+
+defaults=true

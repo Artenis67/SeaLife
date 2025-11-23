@@ -1,0 +1,18 @@
+~ start
+Dockmaster: Capitaine ! Un marchand local veut charger trois conteneurs supplémentaires.
+Dockmaster: Livraison à Busan. Rémunération correcte et chargement immédiat.
+Capitaine: Quel type de marchandise ?
+Dockmaster: Standard. Aucun risque particulier.
+- On accepte
+    Dockmaster: Parfait ! Ajout de [color=orange]+3 conteneurs[/color] à bord.
+    => add
+- On refuse
+    Capitaine: Pas de surcharge inutile, on garde notre plan de route.
+    => refuse
+=> END
+
+~ add
+=> END
+
+~ refuse
+=> END

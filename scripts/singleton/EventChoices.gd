@@ -69,20 +69,30 @@ var man_overboard_choice: String = ""
 
 
 ####################################
-# D'AUTRES EVENTS FUTURS
-# (laisse ici pour ajouter facilement)
+# NOUVEAUX EVENTS RÉALISTES
 ####################################
-# var pirates_choice: String = ""
-# var storm_result: int = 0
-# etc.
 
-var reefer_issue_choice = ""
+# Reefer en alarme
+var reefer_issue_choice: String = ""
 
-var customs_inspection_choice = ""
+# Inspection douanière
+var customs_inspection_choice: String = ""
 
-var dangerous_cargo_choice = ""
+# Marchandise dangereuse mal déclarée
+var dangerous_cargo_choice: String = ""
 
-var overweight_block_choice = ""
+# Bloc en surcharge
+var overweight_block_choice: String = ""
 
+# Contrat rapide au port (+3 conteneurs si accepté)
+var quick_contract_choice: String = ""
+
+# Kidnapping nocturne (payer la rançon ou non)
+var kidnap_choice: String = ""
+
+
+####################################
+# TEMPÊTE (mini-jeu)
+####################################
 var storm_lost_cargo: int = 0
 var storm_reaction_time: float = 0.0
