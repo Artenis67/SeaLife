@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c7xqrcbmfk2ic"
+path="res://.godot/imported/deck_cleaning.dialogue-1edea097f3ced0818276d1a19bd29749.tres"
+
+[deps]
+
+source_file="res://dialogues/events/deck_cleaning.dialogue"
+dest_files=["res://.godot/imported/deck_cleaning.dialogue-1edea097f3ced0818276d1a19bd29749.tres"]
+
+[params]
+
+defaults=true

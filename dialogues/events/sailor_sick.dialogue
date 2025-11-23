@@ -1,0 +1,22 @@
+~ start
+Matelot: Capitaine… j’me sens pas très bien. J’ai mal dormi, et j’ai l’impression que la mer bouge dans ma tête.
+Capitaine: Hmm… est-ce que tu peux tenir ton quart ?
+Matelot: J’peux essayer… mais je garantis rien.
+
+- Tu peux aller te reposer.
+	Capitaine: Va dormir. On fera tourner le reste de l’équipe.
+	Matelot: Merci Capitaine… j’vous décevrai pas.
+	=> rest
+
+- On a besoin de toi, fais ce que tu peux.
+	Capitaine: Tente de tenir, mais signale-moi si ça empire.
+	Matelot: Reçu Capitaine… j’vais donner ce que je peux.
+	=> work
+
+~ rest
+Capitaine: Il se repose… on perd un peu d’efficacité, mais c’est pour le mieux.
+=> END
+
+~ work
+Capitaine: Il tient tant bien que mal… espérons qu’il ne fasse pas d’erreur.
+=> END

@@ -1,0 +1,95 @@
+[gd_scene load_steps=9 format=3 uid="uid://b1o1381musmbv"]
+
+[ext_resource type="Script" uid="uid://dlum4adielpnk" path="res://scenes/minigames/storm_minigame.gd" id="1_02c0y"]
+[ext_resource type="Texture2D" uid="uid://b71ueysiu7qvj" path="res://assets/UI/kenney_game-icons/PNG/White/2x/arrowUp.png" id="2_sbw0b"]
+[ext_resource type="Texture2D" uid="uid://di1sdm4b4rs1j" path="res://assets/UI/kenney_game-icons/PNG/White/2x/arrowDown.png" id="3_74uyo"]
+[ext_resource type="Texture2D" uid="uid://b38wgkmw5n7ji" path="res://assets/UI/kenney_game-icons/PNG/White/2x/arrowLeft.png" id="4_h618m"]
+[ext_resource type="Texture2D" uid="uid://2pai5wku7qxh" path="res://assets/UI/kenney_game-icons/PNG/White/2x/arrowRight.png" id="5_8fugw"]
+[ext_resource type="Texture2D" uid="uid://bldmdxlnbyr53" path="res://assets/BG/pixel-sky-backgrounds-byCaniaEast/fajrbackground.png" id="6_sbw0b"]
+[ext_resource type="FontFile" uid="uid://csi50wvohxn8" path="res://assets/fonts/kenney_kenney-fonts/Fonts/Kenney Mini.ttf" id="7_74uyo"]
+
+[sub_resource type="Theme" id="Theme_h618m"]
+default_font = ExtResource("7_74uyo")
+
+[node name="StormMinigame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_02c0y")
+arrow_up_texture = ExtResource("2_sbw0b")
+arrow_down_texture = ExtResource("3_74uyo")
+arrow_left_texture = ExtResource("4_h618m")
+arrow_right_texture = ExtResource("5_8fugw")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -108.0
+offset_bottom = 388.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_sbw0b")
+stretch_mode = 5
+
+[node name="Arrow" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="InfoLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 208.0
+offset_top = 866.0
+offset_right = 944.0
+offset_bottom = 1057.0
+grow_horizontal = 2
+theme = SubResource("Theme_h618m")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="FinalLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -368.0
+offset_top = -95.5
+offset_right = 368.0
+offset_bottom = 95.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_h618m")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="InstructionsLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -619.0
+offset_top = 55.0
+offset_right = 619.0
+offset_bottom = 174.0
+grow_horizontal = 2
+theme = SubResource("Theme_h618m")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 46
+text = "Clique le plus vite possible sur les flèches pour aider le bateau à rester droit."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

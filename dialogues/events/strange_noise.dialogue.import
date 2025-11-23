@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c7tgoiksj58f2"
+path="res://.godot/imported/strange_noise.dialogue-5e3e717c445774c71a58e85afe3e1482.tres"
+
+[deps]
+
+source_file="res://dialogues/events/strange_noise.dialogue"
+dest_files=["res://.godot/imported/strange_noise.dialogue-5e3e717c445774c71a58e85afe3e1482.tres"]
+
+[params]
+
+defaults=true

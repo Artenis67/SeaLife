@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dqtne1ntshjao"
+path="res://.godot/imported/customs_inspection.dialogue-ca1ebef0a731cba551073cbac17869b9.tres"
+
+[deps]
+
+source_file="res://dialogues/events/customs_inspection.dialogue"
+dest_files=["res://.godot/imported/customs_inspection.dialogue-ca1ebef0a731cba551073cbac17869b9.tres"]
+
+[params]
+
+defaults=true

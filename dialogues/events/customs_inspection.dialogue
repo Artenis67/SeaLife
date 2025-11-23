@@ -1,0 +1,28 @@
+~ start
+Agent: Capitaine, la douane souhaite inspecter plusieurs de vos conteneurs.
+Agent: Ciblage aléatoire, mais la liste est un peu longue.
+Capitaine: Vous cherchez quelque chose en particulier ?
+Agent: Rien de précis à déclarer. Simple contrôle renforcé sur cette rotation.
+
+- Coopérer pleinement et ouvrir tout ce qui est demandé.
+	do EventChoices.customs_inspection_choice = "cooperate"
+	=> cooperate
+
+- Limiter au strict nécessaire, sans trop faciliter l’accès.
+	do EventChoices.customs_inspection_choice = "limit"
+	=> limit
+
+
+~ cooperate
+Capitaine: Très bien. Vous avez la liste, vous aurez les conteneurs.
+Capitaine: On mettra les équipes à disposition pour accélérer les manipulations.
+Agent: Apprécié. On fera en sorte d’être efficaces.
+Capitaine: Ça va nous coûter un peu en manutention, mais au moins, tout sera clair.
+=> END
+
+
+~ limit
+Capitaine: On vous donnera accès à ce qui est strictement obligatoire. Ni plus, ni moins.
+Agent: Très bien Capitaine, mais dans ce cas, l’inspection risque d’être moins souple.
+Capitaine: On respectera la procédure, mais on ne désorganise pas le navire pour autant.
+=> END

@@ -1,5 +1,14 @@
 ~ start
-Capitaine: [#mood = happy] Bienvenue sur [wave amp=25 freq=5]SeaLife[/wave] !
-Capitaine: Nous allons nous occuper de mener a bon port ces cargaison a bord du porte conteneur !
-Capitaine: [shake rate=20 level=10]C'est parti ![/shake]
+Capitaine: [wave amp=10 freq=3]Parfait… on est bien à bord.[/wave]
+Capitaine: Les systèmes répondent, le transpondeur est opérationnel, et l’équipage est déjà en mouvement.
+Capitaine: On commence cette rotation depuis [color=yellow]Singapour[/color]. Direction Los Angeles, en passant par Cái Mép, Yantian, Busan et Yokohama.
+Capitaine: On transporte actuellement [color=orange] {{GameState.cargo_count}} conteneurs[/color]. Nous allons nous faire charger pas de soucis. 
+Capitaine: Côté finances, on démarre avec [color=green] {{GameState.money}} crédits[/color]. On fera gonfler ça aux escales… si on casse rien d’ici là.
+
+Capitaine: Votre rôle ? [shake rate=18 level=6]Éviter les galères inutiles.[/shake]
+Capitaine: En mer, il peut tout arriver : tempêtes, pertes de boîtes, pannes mécaniques, alertes sécurité…  
+Capitaine: Avec un peu de chance, on ira jusqu’à LA sans trop de casse. Avec beaucoup de chance… on fera même du profit.
+
+Capitaine: Bien.  
+Capitaine: [speed=0.3]Si tout est clair pour vous…[/speed] commencons. 
 => END

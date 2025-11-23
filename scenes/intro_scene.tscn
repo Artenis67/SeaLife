@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwnym8dbgqx6q"]
+
+[ext_resource type="Script" uid="uid://c1kx7ws86oua" path="res://scripts/intro_dialogue.gd" id="1_xmg1o"]
+[ext_resource type="Texture2D" uid="uid://cne0qd5yiemqm" path="res://assets/BG/IA/introbg.png" id="2_0y5sa"]
+[ext_resource type="VideoStream" uid="uid://b83stug8hj3yx" path="res://assets/BG/IA/introbg.ogv" id="3_gsw8x"]
+
+[node name="IntroScene" type="Node2D"]
+
+[node name="IntroDialogue" type="Node" parent="."]
+script = ExtResource("1_xmg1o")
+
+[node name="TextureRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+offset_top = -111.0
+offset_right = 1920.0
+offset_bottom = 1185.0
+texture = ExtResource("2_0y5sa")
+stretch_mode = 5
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_top = -74.755
+offset_right = 1080.0
+offset_bottom = 645.245
+scale = Vector2(1.785, 1.785)
+stream = ExtResource("3_gsw8x")
+speed_scale = 0.5
+autoplay = true
+loop = true

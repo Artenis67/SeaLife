@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://73i6dx4fcs8"
+path="res://.godot/imported/sailor_sick.dialogue-a39a2f534f100e557d2425fb3605b18f.tres"
+
+[deps]
+
+source_file="res://dialogues/events/sailor_sick.dialogue"
+dest_files=["res://.godot/imported/sailor_sick.dialogue-a39a2f534f100e557d2425fb3605b18f.tres"]
+
+[params]
+
+defaults=true

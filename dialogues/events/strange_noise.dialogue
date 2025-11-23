@@ -1,0 +1,9 @@
+~ start
+% Technicien: Capitaine, on vient d’entendre un bruit un peu bizarre en salle des machines.
+% Technicien: Rien d’alarmant pour l’instant, mais ça ne ressemblait pas au bruit habituel.
+Capitaine: On a des alarmes qui remontent ?
+Technicien: Non, tous les paramètres restent dans le vert. Température, pression, vibrations… tout est dans les clous.
+Capitaine: Très bien. Notez l’heure exacte et le secteur, on gardera un œil là-dessus pendant le quart.
+Technicien: Reçu. Si ça se reproduit, on ouvrira et on inspectera au prochain créneau.
+Capitaine: Parfait. Tant que les instruments ne hurlent pas, on continue, mais on reste attentifs.
+=> END

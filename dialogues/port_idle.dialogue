@@ -1,3 +1,34 @@
 ~ start
-Capitaine: Heyyy
+% Officier logistique: On dirait que le terminal s’est réveillé avant nous… Les portiques tournent déjà à plein régime.
+% Officier logistique: Écoutez-moi ce bruit de conteneurs qu’on pose et qu’on empile… C’est la musique du chiffre d’affaires.
+% Officier logistique: La zone est saturée, Capitaine. Camions, remorques, reachstackers… Ça circule dans tous les sens.
+% Officier logistique: Toujours un plaisir de revenir à quai… Tant qu’on ne reste pas bloqués trop longtemps.
+% Officier logistique: Le planning est serré, mais pour l’instant on est dans les temps. Profitons-en.
+
+Capitaine: On a actuellement [color=orange] {{GameState.cargo_count}} conteneurs[/color] à bord, ça fait du monde sur le pont.
+
+Officier logistique: Pour cette escale, on commence par vous décharger [color=orange] {{GameState.cargo_unload}} conteneurs[/color].
+Officier logistique: Cette opération vous rapporte environ [color=green] {{GameState.money_earned}} crédits[/color] sur cette étape.
+Officier logistique: Ensuite, le terminal vous recharge de nouveaux conteneurs.
+
+do GameManager.unload_and_earn()
+
+Officier logistique: [speed=0.02]...
+do GameManager.restock_cargo()
+Officier logistique: Tout est bon ! Au revoir.
+
+Capitaine: Tant que le navire reste dans ses lignes de charge et que l’intégrité tient, ça me va.
+Capitaine: On vérifie le plan de chargement, on signe les papiers, et dès que la fenêtre s’ouvre, on reprend la mer.
+Capitaine: Profitons de ce petit répit à quai… la traversée suivante sera peut-être moins tranquille.
+=> END
+
+~ singapor
+Officier logistique: Parfait, je vois que vous commencez votre boucle.
+Officier logistique: On vous charge [color=orange] {{GameState.cargo_max}} conteneurs[/color] et vous êtes prêt pour naviguer !
+Officier logistique: [speed=0.002]...
+do GameState.add_cargo(GameState.cargo_max)
+
+Capitaine: Preparez le bateau, on décolle a l'aube !
+Technicien : Parfait Cap'taine ! [wave amp=25 freq=5]On prepare tout ![/wave]
+
 => END

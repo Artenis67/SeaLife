@@ -25,12 +25,18 @@ func on_time_advanced() -> void:
 ###################################
 
 func _handle_morning() -> void:
-	# Jour 1 = intro
 	if GameState.day == 1 and not GameManager.intro_finished:
 		GameManager.first_steps()
+		return
+
+	if GameState.in_sea:
+		var rng := randi() % 7
+		if rng == 0:
+			GameManager.morning_dialogue("trouble")  # 1/7
+		else:
+			GameManager.morning_dialogue("sea")
 	else:
-		# Matin normal, en mer ou au port (tu peux différencier plus tard)
-		GameManager.morning_dialogue()
+		GameManager.morning_dialogue("port")
 
 
 func _handle_noon() -> void:
@@ -38,8 +44,10 @@ func _handle_noon() -> void:
 		# Midi en mer → event aléatoire
 		EventManager.start_random_event()
 	else:
-		# Midi au port → pas d'event, juste un dialogue "rien de spécial"
-		PortIdleEvent.start_port_idle_dialogue()
+		if GameState.current_port == "Singapor":
+			PortIdleEvent.start_port_idle_dialogue("singapor")
+		else:
+			PortIdleEvent.start_port_idle_dialogue("start")
 
 
 func _handle_evening() -> void:

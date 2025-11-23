@@ -29,3 +29,11 @@ func update_bg():
 	if !GameState.in_sea:
 		bg_texture_rect.texture = bg_p
 	print("Navire en mer : " + str(GameState.in_sea))
+
+
+func _on_canvas_layer_fade_mid():
+	if GameState.next_day_in_port == true:
+		bg_texture_rect.texture = bg_p
+	else:
+		bg_texture_rect.texture = bg_1
+	$Label.text = "Matin"

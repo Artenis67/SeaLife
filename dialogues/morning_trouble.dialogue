@@ -1,0 +1,12 @@
+~ start
+[shake rate=28 level=12]**BRUIT MÉTALLIQUE**[/shake]
+Matelot: Désolé Capitaine ! On a fait tomber une clef de 32 dans la coursive…  
+Matelot: Disons que… ça réveille mieux qu’un réveil.
+
+Capitaine: [speed=0.04]Hmpf…[/speed]  
+Capitaine: Bon… puisque je suis réveillé :  
+Capitaine: Nouveau jour, nouvelle bataille.
+Capitaine: On a [color=orange]{{GameState.cargo_count}}[/color] conteneurs à bord, intégrité à {{GameState.integrity}}%.  
+Capitaine: Et une équipe qui fait plus de bruit qu’un port entier.  
+Capitaine: [wave amp=14 freq=3]Allez… en route. Essayons de finir cette journée sans perdre une boîte.[/wave]
+=> END

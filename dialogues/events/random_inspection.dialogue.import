@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bbsxpudgg5oaa"
+path="res://.godot/imported/random_inspection.dialogue-608bb6e821bda46b54aee0fc422fb1be.tres"
+
+[deps]
+
+source_file="res://dialogues/events/random_inspection.dialogue"
+dest_files=["res://.godot/imported/random_inspection.dialogue-608bb6e821bda46b54aee0fc422fb1be.tres"]
+
+[params]
+
+defaults=true

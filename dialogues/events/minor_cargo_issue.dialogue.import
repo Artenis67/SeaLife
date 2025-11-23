@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://vlvnu3pqq6k"
+path="res://.godot/imported/minor_cargo_issue.dialogue-72883d59c9ee52709fe1954b76e6428d.tres"
+
+[deps]
+
+source_file="res://dialogues/events/minor_cargo_issue.dialogue"
+dest_files=["res://.godot/imported/minor_cargo_issue.dialogue-72883d59c9ee52709fe1954b76e6428d.tres"]
+
+[params]
+
+defaults=true

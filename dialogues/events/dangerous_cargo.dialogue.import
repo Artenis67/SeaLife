@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bx1513qyr8slw"
+path="res://.godot/imported/dangerous_cargo.dialogue-0c73efbeb832dee5ec40c3f113415d55.tres"
+
+[deps]
+
+source_file="res://dialogues/events/dangerous_cargo.dialogue"
+dest_files=["res://.godot/imported/dangerous_cargo.dialogue-0c73efbeb832dee5ec40c3f113415d55.tres"]
+
+[params]
+
+defaults=true

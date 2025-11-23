@@ -1,0 +1,23 @@
+~ start
+Matelot: Capitaine ! On a un bloc de conteneurs à l’avant qui a légèrement bougé.
+Capitaine: Les twist-locks ?
+Matelot: Ils ont tenu, mais deux sangles sont trop tendues.
+Capitaine: On fait quoi ?
+
+- Sécuriser le conteneur immédiatement.
+	Capitaine: On arrête le roulis quelques minutes et on sécurise tout.
+	Matelot: Reçu Capitaine, on y va.
+	=> secure
+
+- Laisser tel quel, ça devrait tenir.
+	Capitaine: Pour l’instant, ça reste dans les tolérances. On continue.
+	Matelot: J’espère que la mer restera calme…
+	=> risk
+
+~ secure
+Capitaine: Ça nous coûte un peu, mais au moins on garde tout à bord.
+=> END
+
+~ risk
+Capitaine: Espérons que la mer ne se lève pas… sinon on perdra peut-être un conteneur ou deux.
+=> END

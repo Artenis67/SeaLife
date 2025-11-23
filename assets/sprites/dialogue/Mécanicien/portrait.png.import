@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8lfsjw0j0xsk"
-path="res://.godot/imported/iaboatport.png-bc11d0d1bf146f136acb453233a220be.ctex"
+uid="uid://x8urfgptgoie"
+path="res://.godot/imported/portrait.png-824145da10ecb3541e68fa9585f4254e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BG/IA/iaboatport.png"
-dest_files=["res://.godot/imported/iaboatport.png-bc11d0d1bf146f136acb453233a220be.ctex"]
+source_file="res://assets/sprites/dialogue/Mécanicien/portrait.png"
+dest_files=["res://.godot/imported/portrait.png-824145da10ecb3541e68fa9585f4254e.ctex"]
 
 [params]
 

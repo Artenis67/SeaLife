@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://daby8xcgpuoqu"
+path="res://.godot/imported/storm.dialogue-3deba914dd1841a5c6dc74385cf96566.tres"
+
+[deps]
+
+source_file="res://dialogues/events/storm.dialogue"
+dest_files=["res://.godot/imported/storm.dialogue-3deba914dd1841a5c6dc74385cf96566.tres"]
+
+[params]
+
+defaults=true

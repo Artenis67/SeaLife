@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://eftkaqhule4f"
+path="res://.godot/imported/morning_at_sea.dialogue-91b3f9f4eb24127f380cf295aeb33355.tres"
+
+[deps]
+
+source_file="res://dialogues/morning_at_sea.dialogue"
+dest_files=["res://.godot/imported/morning_at_sea.dialogue-91b3f9f4eb24127f380cf295aeb33355.tres"]
+
+[params]
+
+defaults=true

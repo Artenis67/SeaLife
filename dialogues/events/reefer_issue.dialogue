@@ -1,0 +1,27 @@
+~ start
+Mécanicien: Capitaine, on a une alarme température sur un conteneur frigorifique.
+Mécanicien: Le groupe froid ne tient plus la consigne, ça dérive doucement.
+Capitaine: La marchandise ?
+Mécanicien: Produits sensibles. Si on laisse comme ça trop longtemps, on risque de tout perdre.
+
+- Faire intervenir un technicien du terminal dès maintenant.
+	do EventChoices.reefer_issue_choice = "repair"
+	=> repair
+
+- Surveiller et attendre le prochain port sans intervenir.
+	do EventChoices.reefer_issue_choice = "ignore"
+	=> ignore
+
+
+~ repair
+Capitaine: On appelle le terminal. Intervention immédiate, même si ça nous coûte.
+Mécanicien: Reçu Capitaine. On coupe, on ouvre et on fait le nécessaire.
+Capitaine: On préfère perdre un peu d’argent que tout le contenu du conteneur.
+=> END
+
+
+~ ignore
+Capitaine: On garde un œil sur les courbes, mais pas d’intervention pour l’instant.
+Mécanicien: Compris… si la température continue de monter, on risque de tout jeter à l’arrivée.
+Capitaine: On assume. Notez l’incident au journal de bord.
+=> END

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xxsk1tr7mkgd"
-path="res://.godot/imported/aiboatbg.png-bb47982a12fd6cac7e5a2033c44a5d3c.ctex"
+uid="uid://cksb4ypnqmt2u"
+path="res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BG/IA/aiboatbg.png"
-dest_files=["res://.godot/imported/aiboatbg.png-bb47982a12fd6cac7e5a2033c44a5d3c.ctex"]
+source_file="res://icon.png"
+dest_files=["res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"]
 
 [params]
 

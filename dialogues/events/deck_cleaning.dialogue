@@ -1,0 +1,21 @@
+~ start
+Matelot: Capitaine ? Le pont commence à être couvert de sel et de traces de rouille.
+Matelot: On pourrait prévoir un nettoyage préventif.
+
+- Faire nettoyer immédiatement.
+	Capitaine: Très bien. Faites passer l’équipe.
+	Matelot: Reçu ! Ça fera du bien au pont.
+	=> clean
+
+- Pas besoin, on verra plus tard.
+	Capitaine: Laissez tomber. On avisera quand on aura du temps.
+	Matelot: Comme vous voulez Capitaine…
+	=> skip
+
+~ clean
+Capitaine: Ça nous coûte un peu, mais le pont sera comme neuf.
+=> END
+
+~ skip
+Capitaine: On garde l’œil dessus, mais pas de nettoyage pour le moment.
+=> END

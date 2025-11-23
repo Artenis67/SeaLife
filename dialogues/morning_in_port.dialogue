@@ -1,0 +1,9 @@
+~ start
+Capitaine: [shake rate=20 level=6]Hé-ho ! On se réveille là-dedans ![/shake]  
+% Capitaine: Le terminal est déjà en activité depuis une heure.
+% Capitaine: On est à [color=yellow] {{GameState.current_port}} [/color] aujourd’hui.  
+% Capitaine: Les portiques commencent le chargement…  
+Capitaine: [wave amp=12 freq=4]Regarde-moi ces grues… ça ne s’arrête jamais.[/wave]
+% Capitaine: Profites-en, c’est le seul moment de la rotation où ça bouge autant sans qu’on soit en pleine tempête.
+% Capitaine: Prépare-toi, une longue journée nous attend.
+=> END

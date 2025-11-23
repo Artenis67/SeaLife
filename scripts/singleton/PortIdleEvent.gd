@@ -4,12 +4,12 @@ extends Node
 var dialogue: DialogueResource = load("res://dialogues/port_idle.dialogue")
 
 
-func start_port_idle_dialogue() -> void:
+func start_port_idle_dialogue(_start_point: String) -> void:
 	# On démarre le dialogue "journée tranquille au port"
 	if not DialogueManager.dialogue_ended.is_connected(_on_dialogue_ended):
 		DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
-	DialogueManager.show_dialogue_balloon(dialogue, "start")
+	DialogueManager.show_dialogue_balloon(dialogue, _start_point)
 
 
 func _on_dialogue_ended(resource: DialogueResource) -> void:

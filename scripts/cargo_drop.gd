@@ -49,7 +49,7 @@ func check_score():
 	match score:
 		0:
 			collector.texture = pc0
-		15:
+		1:
 			collector.texture = pc1
 		3:
 			collector.texture = pc2
@@ -61,7 +61,7 @@ func check_score():
 			collector.texture = pc5
 		12:
 			collector.texture = pc6
-		1:
+		15:
 			collector.texture = pc7
 			game_ended()
 

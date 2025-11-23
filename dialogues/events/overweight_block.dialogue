@@ -1,0 +1,27 @@
+~ start
+Officier: Capitaine, d’après les pesées, on a plusieurs conteneurs plus lourds que ce qui était déclaré.
+Officier: Le bloc au milieu du navire est clairement en surcharge par rapport au plan de chargement.
+Capitaine: Super… nos calculs de stabilité adorent ce genre de surprise.
+Officier: On peut soit réorganiser le bloc, soit partir comme ça en espérant que la mer reste clémente.
+
+- Réorganiser le plan de chargement et corriger la surcharge.
+	do EventChoices.overweight_block_choice = "reorganize"
+	=> reorganize
+
+- Ignorer pour cette fois et garder la configuration actuelle.
+	do EventChoices.overweight_block_choice = "ignore"
+	=> ignore
+
+
+~ reorganize
+Capitaine: On corrige. On fait bouger ce qu’il faut pour repartir sur des bases propres.
+Officier: Reçu. On prévient le terminal, ça va prendre un peu de temps et de mouvement.
+Capitaine: Ça nous coûtera en manutention, mais ce sera toujours moins cher qu’un incident en pleine tempête.
+=> END
+
+
+~ ignore
+Capitaine: On garde la configuration actuelle. On surveillera de près si la mer se lève.
+Officier: Compris, Capitaine. On adaptera la vitesse et la route si ça se dégrade.
+Capitaine: Notez-le dans le journal. Si ça tangue, on saura pourquoi.
+=> END

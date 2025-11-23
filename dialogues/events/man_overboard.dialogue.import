@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bdxm8gulxwa3j"
+path="res://.godot/imported/man_overboard.dialogue-d9a6a1707894f2a8fe99eb6878efdcc2.tres"
+
+[deps]
+
+source_file="res://dialogues/events/man_overboard.dialogue"
+dest_files=["res://.godot/imported/man_overboard.dialogue-d9a6a1707894f2a8fe99eb6878efdcc2.tres"]
+
+[params]
+
+defaults=true

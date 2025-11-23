@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bwc6a8o3xdox"
+path="res://.godot/imported/overweight_block.dialogue-6ee8ec079655499db6f4e426b1769389.tres"
+
+[deps]
+
+source_file="res://dialogues/events/overweight_block.dialogue"
+dest_files=["res://.godot/imported/overweight_block.dialogue-6ee8ec079655499db6f4e426b1769389.tres"]
+
+[params]
+
+defaults=true

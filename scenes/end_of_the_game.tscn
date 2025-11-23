@@ -1,0 +1,189 @@
+[gd_scene load_steps=22 format=3 uid="uid://vgyocybvgwfb"]
+
+[ext_resource type="Texture2D" uid="uid://kmb7ptk8d87o" path="res://assets/BG/IA/endbg.png" id="1_ctl4c"]
+[ext_resource type="Script" uid="uid://dh6pdku6t54he" path="res://scripts/spawner.gd" id="2_1qvcv"]
+[ext_resource type="FontFile" uid="uid://csi50wvohxn8" path="res://assets/fonts/kenney_kenney-fonts/Fonts/Kenney Mini.ttf" id="2_yc0go"]
+[ext_resource type="Texture2D" uid="uid://brxbuvn2lmc5m" path="res://assets/sprites/dialogue/Agent/portrait.png" id="3_2vves"]
+[ext_resource type="Texture2D" uid="uid://dt624p7bxg6n5" path="res://assets/UI/IconGodotNode/color/icon_meteo.png" id="3_4nx0f"]
+[ext_resource type="Script" uid="uid://cqw51p4i5hkjv" path="res://scripts/stats.gd" id="3_7oqat"]
+[ext_resource type="Theme" uid="uid://e7823mv62ich" path="res://assets/button.tres" id="3_oj3so"]
+[ext_resource type="Texture2D" uid="uid://6heyver4q5k" path="res://assets/UI/IconGodotNode/color/icon_character.png" id="4_oj3so"]
+[ext_resource type="Texture2D" uid="uid://3wk1irb3hm6x" path="res://assets/sprites/dialogue/Capitaine/portrait.png" id="4_s20jw"]
+[ext_resource type="Texture2D" uid="uid://guq625ijhecv" path="res://assets/UI/IconGodotNode/color/icon_destroyable_2.png" id="5_7oqat"]
+[ext_resource type="Texture2D" uid="uid://b71vav2jrgdfw" path="res://assets/sprites/dialogue/Cuisinier/portrait.png" id="5_samt8"]
+[ext_resource type="Texture2D" uid="uid://karr0fgqijcj" path="res://assets/UI/IconGodotNode/node_2D/icon_coin.png" id="6_djy0y"]
+[ext_resource type="Texture2D" uid="uid://b1ypmxudt1d3" path="res://assets/sprites/dialogue/Matelot/portrait.png" id="6_q1sp7"]
+[ext_resource type="Texture2D" uid="uid://bc11gj3sxx0ji" path="res://assets/sprites/dialogue/Naufragé/portrait.png" id="7_n44ar"]
+[ext_resource type="Texture2D" uid="uid://dnnwtfcc5emvp" path="res://assets/sprites/dialogue/Officier logistique/portrait.png" id="8_vb7yq"]
+[ext_resource type="Texture2D" uid="uid://bxfvc2881dcdo" path="res://assets/sprites/dialogue/Patron/portrait.png" id="9_rgc5h"]
+[ext_resource type="Texture2D" uid="uid://c2278uhgq8c22" path="res://assets/sprites/dialogue/Technicien/portrait.png" id="10_yc0go"]
+[ext_resource type="Texture2D" uid="uid://x8urfgptgoie" path="res://assets/sprites/dialogue/Mécanicien/portrait.png" id="18_7oqat"]
+[ext_resource type="Texture2D" uid="uid://c8v6kg71l1sgl" path="res://assets/sprites/dialogue/Officier/portrait.png" id="19_djy0y"]
+
+[sub_resource type="Theme" id="Theme_1gxji"]
+default_font = ExtResource("2_yc0go")
+
+[sub_resource type="Curve2D" id="Curve2D_ctl4c"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 80, 1250, 0, 0, 0, 0, 81, -148)
+}
+point_count = 2
+
+[node name="EndOfTheGame" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ctl4c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Stats" type="Control" parent="CanvasLayer"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = -111.0
+offset_top = 223.0
+offset_right = -71.0
+offset_bottom = 263.0
+theme = SubResource("Theme_1gxji")
+
+[node name="BGButton" type="Button" parent="CanvasLayer/Stats"]
+layout_mode = 0
+offset_left = 538.625
+offset_top = 640.0
+offset_right = 1606.385
+offset_bottom = 802.915
+mouse_filter = 2
+theme = ExtResource("3_oj3so")
+theme_override_font_sizes/font_size = 120
+text = "                                   "
+
+[node name="Control" type="Control" parent="CanvasLayer/Stats"]
+anchors_preset = 0
+offset_left = 221.0
+offset_top = 106.000015
+offset_right = 261.0
+offset_bottom = 146.00002
+scale = Vector2(0.855, 0.855)
+script = ExtResource("3_7oqat")
+
+[node name="DayInSea" type="HBoxContainer" parent="CanvasLayer/Stats/Control"]
+layout_mode = 0
+offset_left = 445.614
+offset_top = 647.9532
+offset_right = 1069.854
+offset_bottom = 711.9532
+scale = Vector2(0.9, 0.9)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Stats/Control/DayInSea"]
+clip_contents = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("3_4nx0f")
+stretch_mode = 5
+
+[node name="DayInSeaLabel" type="Label" parent="CanvasLayer/Stats/Control/DayInSea"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "  Jours en mer : "
+
+[node name="TotalEvent" type="HBoxContainer" parent="CanvasLayer/Stats/Control"]
+layout_mode = 0
+offset_left = 448.263
+offset_top = 736.695
+offset_right = 1164.263
+offset_bottom = 800.695
+scale = Vector2(0.9, 0.9)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Stats/Control/TotalEvent"]
+clip_contents = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("4_oj3so")
+stretch_mode = 5
+
+[node name="TotalEventLabel" type="Label" parent="CanvasLayer/Stats/Control/TotalEvent"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "  Événements totaux :"
+
+[node name="TotalCargo" type="HBoxContainer" parent="CanvasLayer/Stats/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 988.18713
+offset_top = 622.1053
+offset_right = 1461.1871
+offset_bottom = 686.1053
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Stats/Control/TotalCargo"]
+clip_contents = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("5_7oqat")
+stretch_mode = 5
+
+[node name="TotalCargoLabel" type="Label" parent="CanvasLayer/Stats/Control/TotalCargo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = " EVP transportés : "
+
+[node name="FinamMoney" type="HBoxContainer" parent="CanvasLayer/Stats/Control"]
+layout_mode = 0
+offset_left = 1039.9753
+offset_top = 730.84705
+offset_right = 1452.9753
+offset_bottom = 794.84705
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Stats/Control/FinamMoney"]
+clip_contents = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("6_djy0y")
+stretch_mode = 5
+
+[node name="FinalMoneyLabel" type="Label" parent="CanvasLayer/Stats/Control/FinamMoney"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "  Crédits finaux : "
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-3, 2)
+curve = SubResource("Curve2D_ctl4c")
+
+[node name="Spawner" type="Node2D" parent="Path2D"]
+script = ExtResource("2_1qvcv")
+textures = Array[Texture2D]([ExtResource("3_2vves"), ExtResource("4_s20jw"), ExtResource("5_samt8"), ExtResource("6_q1sp7"), ExtResource("7_n44ar"), ExtResource("8_vb7yq"), ExtResource("9_rgc5h"), ExtResource("10_yc0go"), ExtResource("18_7oqat"), ExtResource("19_djy0y")])
+_rotation = 90
+
+[node name="Path2D2" type="Path2D" parent="."]
+position = Vector2(1926, 1049)
+rotation = 3.1415927
+curve = SubResource("Curve2D_ctl4c")
+
+[node name="Spawner" type="Node2D" parent="Path2D2"]
+script = ExtResource("2_1qvcv")
+textures = Array[Texture2D]([ExtResource("3_2vves"), ExtResource("4_s20jw"), ExtResource("5_samt8"), ExtResource("6_q1sp7"), ExtResource("7_n44ar"), ExtResource("8_vb7yq"), ExtResource("9_rgc5h"), ExtResource("10_yc0go")])
+_rotation = 270

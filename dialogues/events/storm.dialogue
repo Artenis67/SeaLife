@@ -1,0 +1,20 @@
+~ start
+Mécanicien: Capitaine, les derniers bulletins météo se confirment… on va rentrer dans une zone de gros temps.
+Capitaine: Je vois déjà la mer se lever sur le radar et par les hublots. Ça va secouer.
+Mécanicien: Vent en hausse, creux annoncés bien au-dessus de la normale. On va devoir adapter la vitesse et le cap en permanence.
+Capitaine: Très bien. On maintient l’allure pour l’instant, mais on se tient prêts à corriger dès que ça tape trop fort.
+Capitaine: [shake rate=20 level=8]Les ordres vont tomber vite[/shake]. Il faudra réagir sans traîner, sinon on va perdre en stabilité.
+Mécanicien: On garde un œil sur la propulsion, les alarmes et les vibrations. Si quelque chose sort des limites, on ajuste.
+Capitaine: On transporte [color=orange]{{GameState.cargo_count}} conteneurs[/color] sur le dos, on n’a pas le droit de jouer avec la gravité.
+Capitaine: Reste concentré. Chaque seconde de retard sur les corrections peut nous coûter des boîtes… ou pire.
+=> END
+
+
+~ result
+Mécanicien: Capitaine, la tempête est enfin passée. On a fait le tour du pont.
+Mécanicien: D’après le bilan, on a perdu [color=orange]{{EventChoices.storm_lost_cargo}} conteneurs[/color] pendant le gros du coup de vent.
+Capitaine: Avec un temps de réaction cumulé de [color=yellow]{{EventChoices.storm_reaction_time}} secondes[/color], on s’en sort comme on peut.
+Capitaine: On note les pertes au journal de bord et on vérifie que ce qu’il reste est bien arrimé.
+Mécanicien: On surveillera la structure et les efforts sur la coque sur les prochains relevés.
+Capitaine: Très bien. On reprend la route… en espérant que le reste de la traversée soit plus calme.
+=> END

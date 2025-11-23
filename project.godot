@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Sealife"
-run/main_scene="uid://b3q3v11153op3"
+config/version="1"
+run/main_scene="uid://cs4choq36hky8"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://cksb4ypnqmt2u"
 
 [autoload]
 
@@ -24,6 +25,7 @@ GameManager="*res://scripts/singleton/GameManager.gd"
 EventChoices="*res://scripts/singleton/EventChoices.gd"
 DayFlowManager="*res://scripts/singleton/DayFlowManager.gd"
 PortIdleEvent="*res://scripts/singleton/PortIdleEvent.gd"
+ScreenFade="*res://scenes/screen_fade.tscn"
 
 [dialogue_manager]
 
@@ -41,4 +43,4 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogues/debug.dialogue", "res://dialogues/newday.dialogue", "res://dialogues/first_steps.dialogue", "res://dialogues/event.dialogue", "res://dialogues/evening.dialogue", "res://dialogues/morning.dialogue", "res://dialogues/events/technical_issue.dialogue", "res://dialogues/events/lost_cargo.dialogue", "res://dialogues/port_idle.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogues/debug.dialogue", "res://dialogues/newday.dialogue", "res://dialogues/first_steps.dialogue", "res://dialogues/event.dialogue", "res://dialogues/evening.dialogue", "res://dialogues/events/technical_issue.dialogue", "res://dialogues/events/lost_cargo.dialogue", "res://dialogues/port_idle.dialogue", "res://dialogues/intro.dialogue", "res://dialogues/morning_at_sea.dialogue", "res://dialogues/morning_in_port.dialogue", "res://dialogues/morning_trouble.dialogue", "res://dialogues/events/small_waves.dialogue", "res://dialogues/events/strange_noise.dialogue", "res://dialogues/events/minor_cargo_issue.dialogue", "res://dialogues/events/cook_rolling.dialogue", "res://dialogues/events/sailor_sick.dialogue", "res://dialogues/events/misaligned_cargo.dialogue", "res://dialogues/events/deck_cleaning.dialogue", "res://dialogues/events/random_inspection.dialogue", "res://dialogues/events/man_overboard.dialogue", "res://dialogues/events/reefer_issue.dialogue", "res://dialogues/events/customs_inspection.dialogue", "res://dialogues/events/dangerous_cargo.dialogue", "res://dialogues/events/overweight_block.dialogue", "res://dialogues/events/storm.dialogue")

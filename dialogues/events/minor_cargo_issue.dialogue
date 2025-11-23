@@ -1,0 +1,10 @@
+~ start
+% Matelot: Capitaine, on a eu un léger mouvement sur un bloc de conteneurs à l’avant.
+% Matelot: Rien n’est tombé, mais une sangle a travaillé plus que prévu.
+Capitaine: Les twist-locks ont tenu ?
+Matelot: Oui, tout est encore en place. On a sécurisé à nouveau, doublé quelques points d’arrimage.
+Capitaine: Très bien. Tant qu’aucun conteneur n’a quitté le pont, ça reste une bonne nouvelle.
+Capitaine: On transporte quand même [color=orange]{{GameState.cargo_count}} conteneurs[/color], on ne peut pas se permettre d’en perdre à cause d’un arrimage négligé.
+Matelot: On gardera un œil sur ce bloc pendant la prochaine houle.
+Capitaine: Parfait. Notez l’incident dans le journal, et on continue la route.
+=> END

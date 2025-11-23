@@ -1,0 +1,15 @@
+~ start
+Agent: Capitaine, inspection [wave amp=25 freq=5]surprise[/wave] de routine. Nous devons vérifier plusieurs points du navire.
+Capitaine: Très bien, allez-y. L’équipage est disponible pour vous assister.
+
+% Matelot: Tout est en ordre ici, j’ai rangé la zone avant votre arrivée.
+% Technicien: Pression, températures, vibrations… tout est dans les standards.
+% Matelot: Faites attention à la marche, Capitaine nous rappelle toujours que c’est glissant ici.
+% Technicien: J’ai vérifié les sécurités deux fois ce matin, normalement rien à signaler.
+
+Agent: Vos procédures sont propres. Rien d’anormal à déclarer.
+Agent: On apprécie la [wave amp=25 freq=5]rigueur[/wave] de votre équipage.
+
+Capitaine: Parfait, merci. On reste disponibles si vous voulez vérifier autre chose.
+Agent: Ce sera tout. Continuez comme ça, Capitaine.
+=> END

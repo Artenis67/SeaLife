@@ -1,0 +1,35 @@
+~ start
+Matelot: Capitaine ! Homme à la mer sur tribord !
+Capitaine: Tu es sûr ?
+Matelot: Affirmatif ! Il agite les bras, il est tout seul là dehors.
+Capitaine: On est en pleine route… si on manœuvre, on perd du temps et on prend un peu de risque.
+Matelot: Capitaine… on fait quoi ?
+
+- On le récupère à bord.
+	Capitaine: On dévie. Vitesse réduite, on met l’échelle à la mer.
+	Matelot: Reçu Capitaine, on se prépare à le remonter.
+	=> rescue
+
+- On ne peut pas risquer le navire.
+	Capitaine: On garde le cap. On signale l’homme à la mer par radio, mais on ne manœuvre pas.
+	Matelot: … Bien reçu, Capitaine.
+	=> leave
+
+
+~ rescue
+Naufragé: [wave amp=10 freq=4]Capitaine… merci…[/wave] Je vous dois la vie.
+Naufragé: Mon navire a coulé, j’ai tout perdu, mais… j’ai pu garder un petit sac étanche.
+Naufragé: Il y a [color=green]3000 crédits[/color] dedans. Prenez-les. C’est tout ce qu’il me reste pour vous remercier.
+Capitaine: Gardez ce qu’il vous faut pour tenir. On prendra juste ce que vous insistez à donner.
+Naufragé: Sans vous, je serais déjà au fond. Alors… prenez-les. C’est normal.
+do GameState.add_money(3000)
+Capitaine: Très bien. On vous met en sécurité, et on prévient les autorités au prochain contact.
+=> END
+
+
+~ leave
+Matelot: Capitaine… rien que de le voir s’éloigner, ça fait bizarre.
+Capitaine: On signale sa position aux autorités et aux navires à proximité. C’est tout ce qu’on peut faire.
+Matelot: J’espère qu’un autre bâtiment sera plus proche que nous.
+Capitaine: Le navire passe avant tout. C’est dur, mais c’est la règle qu’on a choisie.
+=> END

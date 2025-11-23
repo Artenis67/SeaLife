@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs4choq36hky8"]
+[gd_scene load_steps=8 format=3 uid="uid://cs4choq36hky8"]
 
 [ext_resource type="FontFile" uid="uid://csi50wvohxn8" path="res://assets/fonts/kenney_kenney-fonts/Fonts/Kenney Mini.ttf" id="1_con2f"]
-[ext_resource type="Texture2D" uid="uid://cms7n3dsuimbp" path="res://assets/BG/IA/firstscreen.png" id="1_yqeox"]
-[ext_resource type="Script" uid="uid://dckrj56k4cdru" path="res://scripts/hudmanager.gd" id="2_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://dgqo1gs77pxxg" path="res://assets/BG/IA/welcomebg.png" id="2_g3eks"]
+[ext_resource type="Theme" uid="uid://e7823mv62ich" path="res://assets/button.tres" id="3_g3eks"]
+[ext_resource type="Texture2D" uid="uid://cpfcfmkwx06ra" path="res://assets/UI/IconGodotNode/control/icon_flag.png" id="4_mhnvy"]
+[ext_resource type="Script" uid="uid://cr62iwfoqfmbc" path="res://scripts/start_button.gd" id="5_4ytvr"]
+[ext_resource type="PackedScene" uid="uid://b3q3v11153op3" path="res://scenes/MainScene.tscn" id="6_g3eks"]
 
 [sub_resource type="Theme" id="Theme_4ytvr"]
 default_font = ExtResource("1_con2f")
@@ -13,6 +16,7 @@ default_font_size = 20
 [node name="Layer" type="CanvasLayer" parent="."]
 
 [node name="HUD" type="Control" parent="Layer"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -26,7 +30,6 @@ offset_bottom = 542.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_4ytvr")
-script = ExtResource("2_mhnvy")
 
 [node name="background" type="TextureRect" parent="Layer/HUD"]
 clip_contents = true
@@ -43,17 +46,29 @@ offset_right = 963.0
 offset_bottom = 725.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_yqeox")
+texture = ExtResource("2_g3eks")
 stretch_mode = 5
 
 [node name="StartButton" type="Button" parent="Layer/HUD"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 362.0
-offset_top = -208.0
-offset_right = 470.0
-offset_bottom = -175.0
-grow_vertical = 0
-text = "Naviguer "
+layout_mode = 0
+offset_left = 123.0
+offset_top = 689.0
+offset_right = 913.0
+offset_bottom = 849.0
+theme = ExtResource("3_g3eks")
+theme_override_font_sizes/font_size = 120
+text = "      Naviguer "
+script = ExtResource("5_4ytvr")
+main_scene = ExtResource("6_g3eks")
+
+[node name="TextureRect" type="TextureRect" parent="Layer/HUD"]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 712.0
+offset_right = 292.0
+offset_bottom = 830.0
+texture = ExtResource("4_mhnvy")
+expand_mode = 3
+stretch_mode = 5
+
+[connection signal="pressed" from="Layer/HUD/StartButton" to="Layer/HUD/StartButton" method="_on_StartButton_pressed"]

@@ -1,0 +1,27 @@
+~ start
+Mécanicien: Capitaine, on a un souci sur un conteneur soi-disant « standard ».
+Mécanicien: D’après ce qu’on voit à l’intérieur, c’est clairement de la marchandise classée dangereuse.
+Capitaine: Donc mauvaise déclaration… ça, la réglementation n’aime pas du tout.
+Mécanicien: Exact. On fait quoi ?
+
+- Le signaler officiellement et isoler le conteneur.
+	do EventChoices.dangerous_cargo_choice = "report"
+	=> report
+
+- Ne rien remonter et continuer la traversée comme ça.
+	do EventChoices.dangerous_cargo_choice = "hide"
+	=> hide
+
+
+~ report
+Capitaine: On n’a pas le choix. On signale l’anomalie à l’armement et au port.
+Capitaine: On isolera le conteneur au prochain quai, même si ça nous coûte en temps et en manutention.
+Mécanicien: Reçu. Au moins, on sera dans les clous en cas de contrôle.
+=> END
+
+
+~ hide
+Capitaine: Rien à déclarer pour le moment. On le laisse là où il est.
+Mécanicien: Très bien… mais si ça remonte plus tard, ça risque de piquer.
+Capitaine: On assumera. Pour l’instant, priorité à la rotation.
+=> END

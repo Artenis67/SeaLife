@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cbksv713031rk"
+path="res://.godot/imported/misaligned_cargo.dialogue-e57599e748f8a5ce0bda9e06bfa2673b.tres"
+
+[deps]
+
+source_file="res://dialogues/events/misaligned_cargo.dialogue"
+dest_files=["res://.godot/imported/misaligned_cargo.dialogue-e57599e748f8a5ce0bda9e06bfa2673b.tres"]
+
+[params]
+
+defaults=true

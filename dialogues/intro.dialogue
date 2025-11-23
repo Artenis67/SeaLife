@@ -1,0 +1,50 @@
+~ start
+Patron: [[Bonjour|Salut]] Capitaine… [wave amp=12 freq=3]prêt pour la rotation ?[/wave]
+Patron: Vous prenez le commandement de notre porte-conteneurs sur la boucle Asie – Côte Ouest.
+Patron: Départ depuis [color=yellow]Singapour[/color], puis [color=yellow]Cái Mép[/color], [color=yellow]Yantian[/color], [color=yellow]Busan[/color], [color=yellow]Yokohama[/color], et enfin [color=yellow]Los Angeles[/color]. Une rotation complète, propre.
+Patron: À chaque escale, vous débarquerez, vous rechargerez… [shake rate=25 level=8]parfois dans l’urgence[/shake].
+Patron: En mer… c’est une autre histoire. Météo instable, perte de boîtes, avaries, alertes nocturnes…
+Patron: Alors avant que vous montiez à bord, dites-moi… Vous voulez un briefing ?
+
+- Expliquez-moi la route.
+	Patron: Très bien, prenons ça dans l’ordre.
+	Patron: Vous quittez [color=yellow]Singapour[/color], l’un des hubs les plus fluides du monde. Le terminal PSA tourne jour et nuit.
+	Patron: Ensuite cap vers [color=yellow]Cái Mép[/color], un port en eau profonde du Vietnam, très utilisé pour le transbordement.
+	Patron: Puis [color=yellow]Yantian[/color] : [shake rate=20 level=8]le monstre logistique[/shake]. Des milliers de mouvements par jour.
+	Patron: Ensuite [color=yellow]Busan[/color], un passage fréquent pour les inspections et petites maintenances.
+	Patron: [wave amp=10 freq=4]Yokohama[/wave] ensuite, avant la traversée du Pacifique.
+	Patron: Une fois à [color=yellow]Los Angeles[/color], vous refermez la boucle.
+	Patron: Si vous voulez voir les risques techniques, je peux détailler.
+	=> start_choices
+
+- Parlez-moi des risques en mer.
+	Patron: [shake rate=30 level=10]Les risques ?[/shake] Vous en aurez.
+	Patron: La météo d’abord : dépressions rapides, rafales anormales, roulis latéral…  
+	Patron: Si vous gérez mal l’assiette, vous pouvez perdre quelques boîtes par-dessus bord.
+	Patron: Ensuite les avaries : surchauffe moteur, alarmes d’huile, générateur auxiliaire capricieux…  
+	Patron: L’équipage est formé, mais vous êtes le dernier filet de sécurité.
+	Patron: Et la sécurité : des alertes piraterie, surtout la nuit.  
+	Patron: Rien n’arrive… jusqu’au jour où ça arrive.  
+	Patron: Vous pouvez revoir la route si besoin.
+	=> start_choices
+
+- Non, partons en mer.
+	Patron: Très bien. [wave amp=10 freq=4]Je ne vous retiens pas.[/wave]
+	Patron: Montez sur la passerelle, Capitaine. Les amarres sont prêtes.
+	Patron: Et ramenez-moi un navire intact, un équipage en forme,  
+	Patron: …et le plus de cargaison possible.
+	=> END
+
+
+~ start_choices
+Patron: Vous voulez revoir quelque chose avant le départ ?
+
+- La route.
+	=> start
+
+- Les risques en mer.
+	=> start
+
+- Non, c’est bon. On largue les amarres.
+	Patron: Parfait. [shake rate=20 level=6]Bonne mer, Capitaine.[/shake]
+	=> END

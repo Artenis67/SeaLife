@@ -1,0 +1,9 @@
+~ start
+Capitaine: [wave amp=10 freq=3]Bonjour, bonjour...[/wave]  
+% Capitaine: La mer est calme ce matin, enfin une accalmie.  
+% Capitaine: On repart pour une nouvelle journée en mer.  
+% Capitaine: On transporte actuellement [color=orange]{{GameState.cargo_count}} conteneurs[/color] conteneurs, et on veut que ça reste sur le bateau. [shake rate=18 level=7]Pas par-dessus bord.[/shake]
+% Capitaine: L’équipage commence déjà à s’agiter, ça sent le café brûlé dans la passerelle…
+% Capitaine: Allez, on se met en route.  
+% Capitaine: Nouveau jour, nouvelles surprises… espérons des bonnes.
+=> END

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cwh17efl42fpf"
+path="res://.godot/imported/small_waves.dialogue-70eaa7e1d7c4d94a02812d72be662888.tres"
+
+[deps]
+
+source_file="res://dialogues/events/small_waves.dialogue"
+dest_files=["res://.godot/imported/small_waves.dialogue-70eaa7e1d7c4d94a02812d72be662888.tres"]
+
+[params]
+
+defaults=true

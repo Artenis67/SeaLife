@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dy5voubmkvt8k"
+path="res://.godot/imported/cook_rolling.dialogue-dbcc794cb5d537c2249777eb9568951c.tres"
+
+[deps]
+
+source_file="res://dialogues/events/cook_rolling.dialogue"
+dest_files=["res://.godot/imported/cook_rolling.dialogue-dbcc794cb5d537c2249777eb9568951c.tres"]
+
+[params]
+
+defaults=true

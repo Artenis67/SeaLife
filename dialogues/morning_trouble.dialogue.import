@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d2t2110d2i7j3"
+path="res://.godot/imported/morning_trouble.dialogue-d07decf7bab1500845415f3fed61aac9.tres"
+
+[deps]
+
+source_file="res://dialogues/morning_trouble.dialogue"
+dest_files=["res://.godot/imported/morning_trouble.dialogue-d07decf7bab1500845415f3fed61aac9.tres"]
+
+[params]
+
+defaults=true

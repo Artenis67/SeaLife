@@ -87,8 +87,8 @@ shape = SubResource("RectangleShape2D_4gu3d")
 curve = SubResource("Curve2D_omasq")
 
 [node name="SpawnLocation" type="PathFollow2D" parent="Path2D"]
-position = Vector2(790.949, 8.17831)
-rotation = -0.00364582
+position = Vector2(790.94934, 8.178309)
+rotation = -0.003645817
 progress = 773.953
 
 [node name="SpawnerTimer" type="Timer" parent="."]

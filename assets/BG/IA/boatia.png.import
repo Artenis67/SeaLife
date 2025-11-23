@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cms7n3dsuimbp"
-path="res://.godot/imported/firstscreen.png-b375eba3662a5add9ed29f23bb2d88f4.ctex"
+uid="uid://c7nfqsetatvj5"
+path="res://.godot/imported/boatia.png-7c28b0abba92d14e92584b45811b615a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BG/IA/firstscreen.png"
-dest_files=["res://.godot/imported/firstscreen.png-b375eba3662a5add9ed29f23bb2d88f4.ctex"]
+source_file="res://assets/BG/IA/boatia.png"
+dest_files=["res://.godot/imported/boatia.png-7c28b0abba92d14e92584b45811b615a.ctex"]
 
 [params]
 

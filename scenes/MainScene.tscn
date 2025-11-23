@@ -1,19 +1,22 @@
-[gd_scene load_steps=35 format=3 uid="uid://b3q3v11153op3"]
+[gd_scene load_steps=55 format=3 uid="uid://b3q3v11153op3"]
 
 [ext_resource type="Texture2D" uid="uid://da5x03pdgl0kj" path="res://assets/UI/kenney_ui-pack-pixel-adventure/Tilesheets/Large tiles/Thick outline/tilemap_packed.png" id="1_08o8g"]
 [ext_resource type="Script" uid="uid://bpfv67ofqxsv2" path="res://scripts/backgroundmanager.gd" id="1_611at"]
+[ext_resource type="Script" uid="uid://cke4f1vn7l6" path="res://scripts/main_scene.gd" id="1_jcw2p"]
 [ext_resource type="Texture2D" uid="uid://by38ti4qs2jl4" path="res://assets/UI/kenney_ui-pack-pixel-adventure/Tilesheets/Small tiles/Thick outline/tilemap_packed.png" id="2_0cxu4"]
 [ext_resource type="Script" uid="uid://dckrj56k4cdru" path="res://scripts/hudmanager.gd" id="2_ibiss"]
+[ext_resource type="Script" uid="uid://dnw3kf5hiyf0w" path="res://scripts/canvas_layer.gd" id="2_r3sjc"]
 [ext_resource type="Script" uid="uid://dfq2n0r22hx8p" path="res://scripts/debug_node.gd" id="3_c6dvc"]
 [ext_resource type="Texture2D" uid="uid://1mu0xpkb3uq2" path="res://assets/UI/kenney_ui-pack-pixel-adventure/Tilesheets/Large tiles/Thin outline/tilemap.png" id="3_xnxdc"]
-[ext_resource type="Texture2D" uid="uid://cv7njrt81c7v6" path="res://assets/BG/IA/iaboatrisingsun.png" id="5_0ehpd"]
-[ext_resource type="Texture2D" uid="uid://calewee1od3mj" path="res://assets/BG/IA/iaboatmiddayf.png" id="6_0ehpd"]
-[ext_resource type="Texture2D" uid="uid://bdocssxey025p" path="res://assets/BG/IA/iaboatevening.png" id="7_8wjpf"]
+[ext_resource type="Texture2D" uid="uid://d2wsxcpjatbeu" path="res://assets/BG/IA/iaboatrisingsun.png" id="5_0ehpd"]
+[ext_resource type="Texture2D" uid="uid://coxuvqlfn07j8" path="res://assets/BG/IA/iaboatmiddayf.png" id="6_0ehpd"]
+[ext_resource type="Texture2D" uid="uid://btfrtjvqnwt6d" path="res://assets/BG/IA/iaboatevening.png" id="7_8wjpf"]
 [ext_resource type="Script" uid="uid://3sn2qtkef1uy" path="res://scripts/events/lost_cargo_event.gd" id="7_u1u68"]
-[ext_resource type="Texture2D" uid="uid://e2w0ywbuyk5t" path="res://assets/BG/IA/iaboatnight.png" id="8_8wjpf"]
+[ext_resource type="Texture2D" uid="uid://b0wmpvbf5clqn" path="res://assets/BG/IA/iaboatnight.png" id="8_8wjpf"]
 [ext_resource type="Script" uid="uid://b3iycqskqcs1g" path="res://scripts/events/find_money_event.gd" id="8_x537r"]
-[ext_resource type="Texture2D" uid="uid://b8lfsjw0j0xsk" path="res://assets/BG/IA/iaboatport.png" id="9_2phbr"]
 [ext_resource type="FontFile" uid="uid://csi50wvohxn8" path="res://assets/fonts/kenney_kenney-fonts/Fonts/Kenney Mini.ttf" id="9_08o8g"]
+[ext_resource type="Texture2D" uid="uid://b8lfsjw0j0xsk" path="res://assets/BG/IA/protbg.png" id="10_i7ifx"]
+[ext_resource type="Texture2D" uid="uid://c7nfqsetatvj5" path="res://assets/BG/IA/boatia.png" id="10_qavw1"]
 [ext_resource type="Texture2D" uid="uid://dt624p7bxg6n5" path="res://assets/UI/IconGodotNode/color/icon_meteo.png" id="11_0ehpd"]
 [ext_resource type="Texture2D" uid="uid://guq625ijhecv" path="res://assets/UI/IconGodotNode/color/icon_destroyable_2.png" id="12_8wjpf"]
 [ext_resource type="Texture2D" uid="uid://karr0fgqijcj" path="res://assets/UI/IconGodotNode/node_2D/icon_coin.png" id="13_25dfr"]
@@ -24,8 +27,23 @@
 [ext_resource type="Script" uid="uid://eiqripupqmhb" path="res://scripts/pulse_anim.gd" id="17_mkg2b"]
 [ext_resource type="Texture2D" uid="uid://37o2ocddk4e3" path="res://assets/UI/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0043.png" id="19_ye0jt"]
 [ext_resource type="Texture2D" uid="uid://073fio2sgpoi" path="res://assets/UI/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0044.png" id="20_7wwop"]
+[ext_resource type="Script" uid="uid://coa7kq5eqfe5q" path="res://scripts/port_entry_broadcast.gd" id="20_qavw1"]
 [ext_resource type="Texture2D" uid="uid://cin5mof7reifl" path="res://assets/UI/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0045.png" id="21_jcw2p"]
 [ext_resource type="Texture2D" uid="uid://b535agymftbqq" path="res://assets/UI/IconGodotNode/node/icon_flag.png" id="22_7wwop"]
+[ext_resource type="Script" uid="uid://dnmjy2pk4cn0s" path="res://scripts/events/small_waves_event.gd" id="28_fto0a"]
+[ext_resource type="Script" uid="uid://b8bx2x0wgwpsn" path="res://scripts/events/strange_noise_event.gd" id="29_mekmn"]
+[ext_resource type="Script" uid="uid://dpa8wa85sroxj" path="res://scripts/events/minor_cargo_incident_event.gd" id="30_l3o4o"]
+[ext_resource type="Script" uid="uid://db28cccg8eyww" path="res://scripts/events/sailor_sick_event.gd" id="31_kwqb8"]
+[ext_resource type="Script" uid="uid://cgqed5g0f7e2u" path="res://scripts/events/misaligned_cargo_event.gd" id="32_y15d6"]
+[ext_resource type="Script" uid="uid://dpo8kyskexeq" path="res://scripts/events/deck_cleaning_event.gd" id="33_u55b3"]
+[ext_resource type="Script" uid="uid://ngutc0gehyr8" path="res://scripts/events/random_inspection_event.gd" id="34_wsqty"]
+[ext_resource type="Script" uid="uid://ikbrwoca1kil" path="res://scripts/events/man_overboard_event.gd" id="35_oiest"]
+[ext_resource type="Script" uid="uid://p0xb0lv7ehes" path="res://scripts/events/cook_rolling_event.gd" id="36_f4jp2"]
+[ext_resource type="Script" uid="uid://dkf0u3f3xmce1" path="res://scripts/events/reefer_issue_event.gd" id="37_kik7w"]
+[ext_resource type="Script" uid="uid://cfp32pgvv0sgl" path="res://scripts/events/customs_inspection_event.gd" id="38_4ikpr"]
+[ext_resource type="Script" uid="uid://xcpupw1rcdc4" path="res://scripts/events/dangerous_cargo_event.gd" id="39_doyhq"]
+[ext_resource type="Script" uid="uid://cp7h777vxc4uk" path="res://scripts/events/overweight_block_event.gd" id="40_2so2y"]
+[ext_resource type="Script" uid="uid://dsw7yofsnvgew" path="res://scripts/events/storm_event.gd" id="41_7yh6i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ehpd"]
 texture = ExtResource("1_08o8g")
@@ -1122,7 +1140,21 @@ default_font_size = 20
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_kjvyo"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qavw1"]
+bg_color = Color(0, 0, 0, 0)
+border_color = Color(0.18538323, 0.18538329, 0.18538311, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.7019608)
+shadow_size = 115
+
+[sub_resource type="Theme" id="Theme_i7ifx"]
+Button/styles/normal = SubResource("StyleBoxFlat_qavw1")
+
 [node name="MainScene" type="Node2D"]
+script = ExtResource("1_jcw2p")
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = 1
@@ -1142,7 +1174,7 @@ bg_1 = ExtResource("5_0ehpd")
 bg_2 = ExtResource("6_0ehpd")
 bg_3 = ExtResource("7_8wjpf")
 bg_4 = ExtResource("8_8wjpf")
-bg_p = ExtResource("9_2phbr")
+bg_p = ExtResource("10_i7ifx")
 
 [node name="Sky" type="TextureRect" parent="Background"]
 offset_top = -15.57
@@ -1150,11 +1182,12 @@ offset_right = 1920.0
 offset_bottom = 1148.4651
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("9_2phbr")
+texture = ExtResource("10_qavw1")
 expand_mode = 1
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="Background"]
+visible = false
 offset_left = 69.0
 offset_top = 406.0
 offset_right = 871.0
@@ -1536,6 +1569,14 @@ offset_right = 56.00006
 offset_bottom = 236.0
 grow_horizontal = 2
 scale = Vector2(1.31, 1.31)
+script = ExtResource("20_qavw1")
+
+[node name="Button" type="Button" parent="UIPlayer/HUD/PortEntryBroadcast"]
+layout_mode = 0
+offset_top = 16.030537
+offset_right = 525.1908
+offset_bottom = 174.80916
+theme = SubResource("Theme_i7ifx")
 
 [node name="BgNotif1" type="TextureRect" parent="UIPlayer/HUD/PortEntryBroadcast"]
 texture_filter = 1
@@ -1597,9 +1638,8 @@ texture = ExtResource("21_jcw2p")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect" type="TextureRect" parent="UIPlayer/HUD/PortEntryBroadcast"]
+[node name="icon1" type="TextureRect" parent="UIPlayer/HUD/PortEntryBroadcast"]
 texture_filter = 1
-custom_minimum_size = Vector2(9.65, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1616,9 +1656,8 @@ texture = ExtResource("22_7wwop")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="UIPlayer/HUD/PortEntryBroadcast"]
+[node name="icon2" type="TextureRect" parent="UIPlayer/HUD/PortEntryBroadcast"]
 texture_filter = 1
-custom_minimum_size = Vector2(9.65, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1643,12 +1682,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -77.713806
-offset_top = -20.561066
-offset_right = 77.24805
-offset_bottom = 11.309166
+offset_left = -70.78
+offset_top = -17.231003
+offset_right = 157.2201
+offset_bottom = 22.768997
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.595, 0.595)
+theme_override_font_sizes/font_size = 32
 text = "Nouveau Port"
 horizontal_alignment = 1
 
@@ -1660,13 +1701,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -77.713806
-offset_top = 12.263367
-offset_right = 77.24805
-offset_bottom = 38.21756
+offset_left = -83.73399
+offset_top = 8.010002
+offset_right = 71.22766
+offset_bottom = 38.010017
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 23
+scale = Vector2(1.08, 1.08)
+theme_override_font_sizes/font_size = 24
 text = "Singapour"
 horizontal_alignment = 1
 
@@ -1719,12 +1761,66 @@ HUD = NodePath("../../../UIPlayer/HUD")
 [node name="technical_issue_event" type="Node" parent="Managers/EventList"]
 script = ExtResource("8_x537r")
 
+[node name="SmallWavesEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("28_fto0a")
+
+[node name="StrangeNoiseEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("29_mekmn")
+
+[node name="MinorCargoIncidentEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("30_l3o4o")
+
+[node name="SailorSickEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("31_kwqb8")
+
+[node name="MisalignedCargoEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("32_y15d6")
+
+[node name="DeckCleaningEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("33_u55b3")
+
+[node name="RandomInspectionEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("34_wsqty")
+
+[node name="ManOverboardEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("35_oiest")
+
+[node name="CookRollingEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("36_f4jp2")
+
+[node name="ReeferIssueEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("37_kik7w")
+
+[node name="CustomsInspectionEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("38_4ikpr")
+
+[node name="DangerousCargoEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("39_doyhq")
+
+[node name="OverweightBlockEvent" type="Node" parent="Managers/EventList"]
+script = ExtResource("40_2so2y")
+
+[node name="StormEvent" type="Node" parent="Managers/EventList" node_paths=PackedStringArray("HUD", "_TileMap")]
+script = ExtResource("41_7yh6i")
+HUD = NodePath("../../../UIPlayer/HUD")
+_TileMap = NodePath("../../../TileMap")
+
 [node name="event" parent="Managers/EventList" instance=ExtResource("16_0ehpd")]
 
 [node name="DebugNode" type="Node2D" parent="."]
 script = ExtResource("3_c6dvc")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("2_r3sjc")
+
+[node name="FadeLayer" type="ColorRect" parent="CanvasLayer"]
+z_index = 2000
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
 [connection signal="map_closed" from="UIPlayer/HUD/TrajectBook" to="UIPlayer/HUD/PortNameParent" method="on_map_closed"]
 [connection signal="map_opened" from="UIPlayer/HUD/TrajectBook" to="UIPlayer/HUD/PortNameParent" method="on_map_opened"]
 [connection signal="button_down" from="UIPlayer/HUD/TrajectBook/BookContainer/Text" to="UIPlayer/HUD/TrajectBook/BookContainer" method="_on_button_button_down"]
 [connection signal="mouse_entered" from="UIPlayer/HUD/TrajectBook/BookContainer/Text" to="UIPlayer/HUD/TrajectBook/BookContainer" method="_on_button_mouse_entered"]
+[connection signal="fade_mid" from="CanvasLayer" to="Background" method="_on_canvas_layer_fade_mid"]
